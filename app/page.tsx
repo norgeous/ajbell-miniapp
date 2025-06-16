@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import StarRating from "@/components/StarRating";
+import GradientRating from "@/components/GradientRating";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
         <StarRating value={4} />
         <StarRating value={5} />
         <StarRating value={7} max={10} />
+        <GradientRating />
+        {/*
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -52,6 +55,8 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        */}
+
       </main>
       <footer className={styles.footer}>
         <a
