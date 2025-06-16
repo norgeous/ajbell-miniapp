@@ -1,10 +1,17 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import StarRating from "@/components/StarRating";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <StarRating value={1} />
+        <StarRating value={2} />
+        <StarRating value={3} />
+        <StarRating value={4} />
+        <StarRating value={5} />
+        <StarRating value={7} max={10} />
         <Image
           className={styles.logo}
           src="/next.svg"
