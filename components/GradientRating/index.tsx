@@ -7,7 +7,7 @@ const Wrap = styled.div`
   gap: 4px;
 `;
 
-const Piece = styled.div`
+const Piece = styled.span`
   width: 100%;
   background: pink;
   height: 40px;
