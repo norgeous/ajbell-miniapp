@@ -9,8 +9,8 @@ const StarRating = ({ value, max = 5 }:IStarRating) => {
 
   return (
     <div>
-      {Array.from({ length: value }, i => <FaStar/>)}
-      {Array.from({ length: max - value }, i => <FaRegStar/>)}
+      {Array.from({ length: value }, (_, i) => <FaStar key={i} />)}
+      {Array.from({ length: max - value }, (_, i) => <FaRegStar key={i} />)}
     </div>
   );
 };
