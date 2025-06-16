@@ -15,11 +15,15 @@ npm install
 | `npm run dev` | Runs Nextjs in development mode |
 | `npm run storybook` | Runs Storybook in development mode |
 
-## Features
+## Features / TODO
 
 - [X] NextJS
 - [X] Storybook
+  - [ ] add Storybook plugins
 - [ ] Build the SPA
+  - [ ] analystRating, is displayed as a star rating between 0-5. 
+  - [ ] SRRI, is a sliding measure of risk between 0-10 where 10 zero is low risk, 10 is very high risk. 
+  - [ ] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages.
 - [ ] Error handling
 - [ ] Caching / SSR
 - [ ] Tests
