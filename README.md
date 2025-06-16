@@ -43,4 +43,6 @@ sudo npm i -g npm
 npx create-next-app@latest
 cd ajbell-miniapp
 npm create storybook@latest
+npm i -S react-icons
+npm i -S styled-components
 ```
