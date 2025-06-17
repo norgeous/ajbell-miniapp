@@ -112,6 +112,7 @@ export const NormalisationOf3Halfs: Story = {
   },
 };
 
+// from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RX1.json
 export const RealData1: Story = {
   args: {
     values: [
@@ -123,3 +124,17 @@ export const RealData1: Story = {
     ],
   },
 };
+
+// from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RV9.json
+export const RealData2: Story = {
+  args: {
+    values: [
+      { label: 'Stock', value: 25.53738 },
+      { label: 'Bond', value: 54.25369 },
+      { label: 'Cash', value: 19.69435 },
+      { label: 'Other', value: 1.00772 },
+      { label: 'Property', value: 0 },
+    ],
+  },
+};
+

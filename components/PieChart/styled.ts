@@ -18,7 +18,7 @@ export const Svg = styled.svg`
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 500px;
+  max-width: 250px;
 `;
 
 const circumference = (Math.PI * 2) * 25;
