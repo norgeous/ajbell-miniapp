@@ -1,13 +1,17 @@
 import adaptPieValues from './adapter';
-import { demo, PieValues } from './demo-data';
 import PieSlice from './PieSlice';
 import { Svg, Table, Tr, Td, LegendColor } from './styled';
+
+export type PieValues = {
+  label: string;
+  value: number;
+};
 
 interface IPieChart {
   values: PieValues[];
 }
 
-const PieChart = ({ values = demo }: IPieChart) => {
+const PieChart = ({ values }: IPieChart) => {
   const adpatedValues = adaptPieValues(values);
   return (
     <>

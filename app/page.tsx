@@ -1,9 +1,8 @@
 import styles from './page.module.css';
-
 import Fund from '@/components/Fund';
 import cautiousMockData from '@/mocks/Cautious.json';
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -12,4 +11,6 @@ export default function Home() {
       <footer className={styles.footer}></footer>
     </div>
   );
-}
+};
+
+export default Home;

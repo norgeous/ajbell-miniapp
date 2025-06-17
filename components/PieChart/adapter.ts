@@ -1,4 +1,4 @@
-import { PieValues } from './demo-data';
+import { PieValues } from '.';
 
 const percentToDeg = (percent: number) => (percent / 100) * 360;
 
