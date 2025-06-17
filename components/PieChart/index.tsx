@@ -9,8 +9,8 @@ interface IPieChart {
 
 const PieChart = ({ values = demo }:IPieChart) => (
   <Svg width="100" height="100" viewBox="0 0 100 100">
-    {adaptPieValues(values).map(({ label, value, offsetDeg }, index) => (
-      <PieSlice key={label} index={index} value={value} offsetDeg={offsetDeg} />
+    {adaptPieValues(values).map(({ label, normalisedValue, offsetDeg }, index) => (
+      <PieSlice key={label} index={index} value={normalisedValue} offsetDeg={offsetDeg} />
     ))}
   </Svg>
 );

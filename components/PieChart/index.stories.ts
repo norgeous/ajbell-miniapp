@@ -57,3 +57,9 @@ export const Eighths: Story = {
     values: [{label:'one',value:100/8},{label:'two',value:100/8},{label:'thr',value:100/8},{label:'fou',value:100/8},{label:'fiv',value:100/8},{label:'six',value:100/8},{label:'sev',value:100/8},{label:'eig',value:100/8}],
   },
 };
+
+export const Normalisation: Story = {
+  args: {
+    values: [{label:'one',value:50},{label:'two',value:50},{label:'thr',value:50}],
+  },
+};
