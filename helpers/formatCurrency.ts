@@ -4,7 +4,7 @@ const currencySymbols = {
 
 const formatCurrency = (
   amount: number,
-  currencyId: keyof typeof currencySymbols,
-) => `${currencySymbols[currencyId]} ${amount.toFixed(2)}`;
+  currencyId: keyof typeof currencySymbols = 'GBX',
+) => `${currencySymbols[currencyId]}${amount.toFixed(2)}`;
 
 export default formatCurrency;

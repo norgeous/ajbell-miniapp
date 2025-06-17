@@ -5,6 +5,7 @@ import StarRating from '../StarRating';
 import DataTable from '../Table';
 
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import formatCurrency from '@/helpers/formatCurrency';
 
 const ExternalLink = ({ href, children }) => (
   <a href={href} target="_blank" style={{ display: 'block' }}>
@@ -26,10 +27,11 @@ const Fund = ({ data }: IFund) => {
       <GradientRating value={data.data.ratings.SRRI} />
       <div>{data.data.ratings.analystRatingLabel}</div>
       <div>
-        last price: {data.data.quote.currency} {data.data.quote.lastPrice} (
+        Last Price:{' '}
+        {formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)} (
         {formatDate(data.data.quote.lastPriceDate)})
       </div>
-      <div>Ongoing charge: {data.data.quote.ongoingCharge}%</div>
+      <div>Ongoing Charge: {data.data.quote.ongoingCharge}%</div>
       <PieChart values={data.data.portfolio.asset} />
       {data.data.documents.map(({ id, type, url }) => (
         <ExternalLink key={id} href={url}>
