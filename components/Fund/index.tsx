@@ -7,6 +7,7 @@ import PieChart from '@/components/PieChart';
 import StarRating from '@/components/StarRating';
 import DataTable from '@/components/Table';
 import ExternalLink from '@/components/ExternalLink';
+import GlassCard from '../GlassCard';
 
 interface IFund {
   data: AJBellResponseType;
@@ -15,33 +16,39 @@ interface IFund {
 const Fund = ({ data }: IFund) => {
   return (
     <>
-      <h1>{data.data.quote.name}</h1>
-      <div>{data.data.quote.sectorName}</div>
-      <p>{data.data.profile.objective}</p>
-      <StarRating value={data.data.ratings.analystRating} />
-      {data.data.ratings.SRRI && (
-        <GradientRating value={data.data.ratings.SRRI} />
-      )}
-      <div>{data.data.ratings.analystRatingLabel}</div>
-      <div>
-        Last Price:{' '}
-        {formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)} (
-        {formatDate(data.data.quote.lastPriceDate)})
-      </div>
-      <div>Ongoing Charge: {formatPercent(data.data.quote.ongoingCharge)}</div>
-      <PieChart values={data.data.portfolio.asset} />
-      {data.data.documents.map(({ id, type, url }) => (
-        <ExternalLink key={id} href={url}>
-          {type}
-        </ExternalLink>
-      ))}
-      <DataTable
-        headings={['Holding', 'Weight']}
-        data={data.data.portfolio.top10Holdings.map(({ name, weighting }) => ({
-          name,
-          weighting: formatPercent(weighting),
-        }))}
-      />
+      <GlassCard>
+        <h1>{data.data.quote.name}</h1>
+        <div>{data.data.quote.sectorName}</div>
+        <p>{data.data.profile.objective}</p>
+        <StarRating value={data.data.ratings.analystRating} />
+        {data.data.ratings.SRRI && (
+          <GradientRating value={data.data.ratings.SRRI} />
+        )}
+        <div>{data.data.ratings.analystRatingLabel}</div>
+        <div>
+          Last Price:{' '}
+          {formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)}{' '}
+          ({formatDate(data.data.quote.lastPriceDate)})
+        </div>
+        <div>
+          Ongoing Charge: {formatPercent(data.data.quote.ongoingCharge)}
+        </div>
+        <PieChart values={data.data.portfolio.asset} />
+        {data.data.documents.map(({ id, type, url }) => (
+          <ExternalLink key={id} href={url}>
+            {type}
+          </ExternalLink>
+        ))}
+        <DataTable
+          headings={['Holding', 'Weight']}
+          data={data.data.portfolio.top10Holdings.map(
+            ({ name, weighting }) => ({
+              name,
+              weighting: formatPercent(weighting),
+            }),
+          )}
+        />
+      </GlassCard>
       {/* <hr />
       <pre>{JSON.stringify(data, null, 2)}</pre> */}
     </>
