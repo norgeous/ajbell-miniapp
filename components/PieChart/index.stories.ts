@@ -12,54 +12,78 @@ type Story = StoryObj<typeof meta>;
 
 export const Whole: Story = {
   args: {
-    values: [{label:'one',value:100}],
+    values: [
+      { label: 'one', value: 100}],
   },
 };
 
 export const Halfs: Story = {
   args: {
-    values: [{label:'one',value:50},{label:'two',value:50}],
+    values: [
+      { label: 'one', value: 50},{label:'two',value:50}],
   },
 };
 
 export const Thirds: Story = {
   args: {
-    values: [{label:'one',value:33.33333},{label:'two',value:33.33333},{label:'thr',value:33.33333}],
+    values: [
+      { label: 'one', value: 33.33333},{label:'two',value:33.33333},{label:'thr',value:33.33333}],
   },
 };
 
 export const Quarters: Story = {
   args: {
-    values: [{label:'one',value:25},{label:'two',value:25},{label:'thr',value:25},{label:'fou',value:25}],
+    values: [
+      { label: 'one', value: 25},{label:'two',value:25},{label:'thr',value:25},{label:'fou',value:25}],
   },
 };
 
 export const Fifths: Story = {
   args: {
-    values: [{label:'one',value:20},{label:'two',value:20},{label:'thr',value:20},{label:'fou',value:20},{label:'fiv',value:20}],
+    values: [
+      { label: 'one', value: 20},{label:'two',value:20},{label:'thr',value:20},{label:'fou',value:20},{label:'fiv',value:20}],
   },
 };
 
 export const Sixths: Story = {
   args: {
-    values: [{label:'one',value:100/6},{label:'two',value:100/6},{label:'thr',value:100/6},{label:'fou',value:100/6},{label:'fiv',value:100/6},{label:'six',value:100/6}],
+    values: [
+      { label: 'one', value: 100/6},{label:'two',value:100/6},{label:'thr',value:100/6},{label:'fou',value:100/6},{label:'fiv',value:100/6},{label:'six',value:100/6}],
   },
 };
 
 export const Sevenths: Story = {
   args: {
-    values: [{label:'one',value:100/7},{label:'two',value:100/7},{label:'thr',value:100/7},{label:'fou',value:100/7},{label:'fiv',value:100/7},{label:'six',value:100/7},{label:'sev',value:100/7}],
+    values: [
+      { label: 'one', value: 100/7},{label:'two',value:100/7},{label:'thr',value:100/7},{label:'fou',value:100/7},{label:'fiv',value:100/7},{label:'six',value:100/7},{label:'sev',value:100/7}],
   },
 };
 
 export const Eighths: Story = {
   args: {
-    values: [{label:'one',value:100/8},{label:'two',value:100/8},{label:'thr',value:100/8},{label:'fou',value:100/8},{label:'fiv',value:100/8},{label:'six',value:100/8},{label:'sev',value:100/8},{label:'eig',value:100/8}],
+    values: [
+      { label: 'one', value: 100/8},{label:'two',value:100/8},{label:'thr',value:100/8},{label:'fou',value:100/8},{label:'fiv',value:100/8},{label:'six',value:100/8},{label:'sev',value:100/8},{label:'eig',value:100/8}],
   },
 };
 
 export const Normalisation: Story = {
   args: {
-    values: [{label:'one',value:50},{label:'two',value:50},{label:'thr',value:50}],
+    values: [
+      { label: 'one', value: 50},{label:'two',value:50},{label:'thr',value:50}],
   },
 };
+
+export const RealData1: Story = {
+  args: {
+    values: [
+      { label: "Stock", value: 55.82681 },
+      { label: "Bond", value: 35.29226 },
+      { label: "Cash", value: 8.6057 },
+      { label: "Other", value: 1.48948 },
+      { label: "Property", value: 0 }
+    ],
+  },
+};
+
+
+
