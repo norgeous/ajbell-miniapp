@@ -10,6 +10,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const Whole: Story = {
+  args: {
+    values: [{label:'one',value:100}],
+  },
+};
+
 export const Halfs: Story = {
   args: {
     values: [{label:'one',value:50},{label:'two',value:50}],
