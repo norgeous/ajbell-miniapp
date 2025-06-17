@@ -7,14 +7,15 @@ interface IPieSlice {
 }
 
 const sliceColors = [
-  'oklch(.66 .15 45)',
-  'oklch(.66 .15 135)',
-  'oklch(.66 .15 225)',
-  'oklch(.66 .15 315)',
   'oklch(.66 .15 0)',
   'oklch(.66 .15 90)',
   'oklch(.66 .15 180)',
   'oklch(.66 .15 270)',
+
+  'oklch(.66 .15 45)',
+  'oklch(.66 .15 135)',
+  'oklch(.66 .15 225)',
+  'oklch(.66 .15 315)',
 ];
 
 const PieSlice = ({ index, value, offsetDeg }:IPieSlice) => (
@@ -24,7 +25,7 @@ const PieSlice = ({ index, value, offsetDeg }:IPieSlice) => (
     cy="50"
     fill="transparent"
     transform={`rotate(${-90 + offsetDeg} 50 50)`}
-    stroke={sliceColors[index % sliceColors.length]}
+    stroke={sliceColors[index] || 'red'}
     strokeWidth="50"
     strokeDasharray={`${((value * circumference) / 100)} ${circumference}`}
   />
