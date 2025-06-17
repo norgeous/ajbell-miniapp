@@ -13,7 +13,9 @@ export default function Home() {
         <StarRating value={4} />
         <StarRating value={5} />
         <StarRating value={7} max={10} />
+        <GradientRating max={5}/>
         <GradientRating />
+        <GradientRating max={20}/>
         {/*
         <Image
           className={styles.logo}
