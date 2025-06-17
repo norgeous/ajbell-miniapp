@@ -7,9 +7,10 @@ import PieChart from '@/components/PieChart';
 import StarRating from '@/components/StarRating';
 import DataTable from '@/components/Table';
 import ExternalLink from '@/components/ExternalLink';
+import { AJBellResponseType } from '@/helpers/endpoint';
 
 interface IFund {
-  data: any;
+  data: AJBellResponseType;
 }
 
 const Fund = ({ data }: IFund) => {
