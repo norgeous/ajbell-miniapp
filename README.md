@@ -36,7 +36,7 @@ npm install
 - [ ] Front-end performance
 - [ ] a11y (esp. of graphs)
 
-## Steps to recreate this project
+## Starting steps to recreate this project
 
 ```sh
 sudo n latest
