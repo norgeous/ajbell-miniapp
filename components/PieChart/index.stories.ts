@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import PieChart from '.';
+import cautiousMockData from '@/mocks/Cautious.json';
+import balancedMockData from '@/mocks/Balanced.json';
+import adventurousMockData from '@/mocks/Adventurous.json';
 
 const meta = {
   title: 'Example/PieChart',
@@ -13,39 +16,21 @@ type Story = StoryObj<typeof meta>;
 // from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RV9.json
 export const Cautious: Story = {
   args: {
-    values: [
-      { label: 'Stock', value: 25.53738 },
-      { label: 'Bond', value: 54.25369 },
-      { label: 'Cash', value: 19.69435 },
-      { label: 'Other', value: 1.00772 },
-      { label: 'Property', value: 0 },
-    ],
+    values: cautiousMockData.data.portfolio.asset,
   },
 };
 
 // from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RX1.json
 export const Balanced: Story = {
   args: {
-    values: [
-      { label: 'Stock', value: 55.82681 },
-      { label: 'Bond', value: 35.29226 },
-      { label: 'Cash', value: 8.6057 },
-      { label: 'Other', value: 1.48948 },
-      { label: 'Property', value: 0 },
-    ],
+    values: balancedMockData.data.portfolio.asset,
   },
 };
 
 // from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8VG2.json
 export const Adventurous: Story = {
   args: {
-    values: [
-      { label: 'Stock', value: 85.0684 },
-      { label: 'Bond', value: 11.11107 },
-      { label: 'Cash', value: 3.65583 },
-      { label: 'Other', value: 1.52162 },
-      { label: 'Property', value: 0 },
-    ],
+    values: adventurousMockData.data.portfolio.asset,
   },
 };
 
