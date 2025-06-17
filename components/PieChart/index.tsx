@@ -21,19 +21,17 @@ const PieChart = ({ values = demo }: IPieChart) => {
           />
         ))}
       </Svg>
-      <div>
-        <table>
-          {adpatedValues.map(({ label, value }, index) => (
-            <tr key={label}>
-              <td>
-                <LegendColor index={index} />
-              </td>
-              <td>{label}</td>
-              <td>{value}%</td>
-            </tr>
-          ))}
-        </table>
-      </div>
+      <table>
+        {adpatedValues.map(({ label, value }, index) => (
+          <tr key={label}>
+            <td>
+              <LegendColor index={index} />
+            </td>
+            <td>{label}</td>
+            <td>{value}%</td>
+          </tr>
+        ))}
+      </table>
     </>
   );
 };
