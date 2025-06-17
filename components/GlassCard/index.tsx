@@ -15,7 +15,7 @@ const GlassCard = styled.div`
   position: relative;
 
   background: hsl(from hsl(243, 26%, 15%) h s l / 0.25);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(24px);
 
   &::before {
     content: '';
