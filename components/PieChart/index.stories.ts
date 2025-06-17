@@ -27,11 +27,11 @@ export const Cautious: Story = {
 export const Balanced: Story = {
   args: {
     values: [
-      { label: "Stock", value: 55.82681 },
-      { label: "Bond", value: 35.29226 },
-      { label: "Cash", value: 8.6057 },
-      { label: "Other", value: 1.48948 },
-      { label: "Property", value: 0 },
+      { label: 'Stock', value: 55.82681 },
+      { label: 'Bond', value: 35.29226 },
+      { label: 'Cash', value: 8.6057 },
+      { label: 'Other', value: 1.48948 },
+      { label: 'Property', value: 0 },
     ],
   },
 };
@@ -40,20 +40,18 @@ export const Balanced: Story = {
 export const Adventurous: Story = {
   args: {
     values: [
-        { label: "Stock", value: 85.0684 },
-        { label: "Bond", value: 11.11107 },
-        { label: "Cash", value: 3.65583 },
-        { label: "Other", value: 1.52162 },
-        { label: "Property", value: 0 },
+      { label: 'Stock', value: 85.0684 },
+      { label: 'Bond', value: 11.11107 },
+      { label: 'Cash', value: 3.65583 },
+      { label: 'Other', value: 1.52162 },
+      { label: 'Property', value: 0 },
     ],
   },
 };
 
 export const Whole: Story = {
   args: {
-    values: [
-      { label: 'A', value: 100 },
-    ],
+    values: [{ label: 'A', value: 100 }],
   },
 };
 
@@ -102,12 +100,12 @@ export const Fifths: Story = {
 export const Sixths: Story = {
   args: {
     values: [
-      { label: 'A', value: 100/6 },
-      { label: 'B', value: 100/6 },
-      { label: 'C', value: 100/6 },
-      { label: 'D', value: 100/6 },
-      { label: 'E', value: 100/6 },
-      { label: 'F', value: 100/6 },
+      { label: 'A', value: 100 / 6 },
+      { label: 'B', value: 100 / 6 },
+      { label: 'C', value: 100 / 6 },
+      { label: 'D', value: 100 / 6 },
+      { label: 'E', value: 100 / 6 },
+      { label: 'F', value: 100 / 6 },
     ],
   },
 };
@@ -115,13 +113,13 @@ export const Sixths: Story = {
 export const Sevenths: Story = {
   args: {
     values: [
-      { label: 'A', value: 100/7 },
-      { label: 'B', value: 100/7 },
-      { label: 'C', value: 100/7 },
-      { label: 'D', value: 100/7 },
-      { label: 'E', value: 100/7 } ,
-      { label: 'F', value: 100/7 },
-      { label: 'G', value: 100/7 },
+      { label: 'A', value: 100 / 7 },
+      { label: 'B', value: 100 / 7 },
+      { label: 'C', value: 100 / 7 },
+      { label: 'D', value: 100 / 7 },
+      { label: 'E', value: 100 / 7 },
+      { label: 'F', value: 100 / 7 },
+      { label: 'G', value: 100 / 7 },
     ],
   },
 };
@@ -129,14 +127,14 @@ export const Sevenths: Story = {
 export const Eighths: Story = {
   args: {
     values: [
-      { label: 'A', value: 100/8 },
-      { label: 'B', value: 100/8 },
-      { label: 'C', value: 100/8 },
-      { label: 'D', value: 100/8 },
-      { label: 'E', value: 100/8 },
-      { label: 'F', value: 100/8 },
-      { label: 'G', value: 100/8 },
-      { label: 'H', value: 100/8 },
+      { label: 'A', value: 100 / 8 },
+      { label: 'B', value: 100 / 8 },
+      { label: 'C', value: 100 / 8 },
+      { label: 'D', value: 100 / 8 },
+      { label: 'E', value: 100 / 8 },
+      { label: 'F', value: 100 / 8 },
+      { label: 'G', value: 100 / 8 },
+      { label: 'H', value: 100 / 8 },
     ],
   },
 };
@@ -150,4 +148,3 @@ export const NormalisationOf3Halfs: Story = {
     ],
   },
 };
-

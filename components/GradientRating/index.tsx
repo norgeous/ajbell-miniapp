@@ -1,4 +1,4 @@
-import { Wrap, Piece } from "./styled";
+import { Wrap, Piece } from './styled';
 
 interface IGradientRating {
   value: number;

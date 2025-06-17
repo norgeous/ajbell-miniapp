@@ -2,151 +2,101 @@
   "data": {
     "quote": {
       "__typename": "Fund",
-
       "name": "VT AJ Bell Balanced I Acc",
-
       "marketCode": "FUND:BYW8RX1",
-
       "lastPrice": 146.588,
-
       "lastPriceDate": "2024-06-04",
-
       "ongoingCharge": 0.31,
-
       "sectorName": "Mixed Investment 40-85% Shares",
-
       "currency": "GBX"
     },
-
     "profile": {
       "objective": "The investment objective of the fund is to achieve long-term capital growth with a balanced approach between defensive assets such as cash, fixed interest securities, money-market funds and collective investment schemes following alternative strategies such as property and commodities, and higher risk assets such as equities. This is to keep the Fund within a predetermined risk profile. Capital is in fact at risk and there is no guarantee that capital growth will be achieved over a 5 year, or any period. The Fund will seek to achieve its objective (and so provide exposure to the asset classes noted in the objective) by investing predominantly (80% +), in index-tracking investments or strategies (those instruments and/or investment strategies that aim to track the performance of various financial indices) and which typically consist of collective investment schemes (including those managed or operated by the ACD) as well as equities, bonds and transferable securities."
     },
-
     "ratings": {
       "analystRating": 4,
-
       "SRRI": null,
-
       "analystRatingLabel": "Neutral"
     },
-
     "documents": [
       {
         "id": "511596465",
-
         "type": "Factsheet",
-
         "url": "https://doc.morningstar.com/Document/fb1caec57689f7a413c45d3da380c5af.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
       },
-
       {
         "id": "504731646",
-
         "type": "KIID",
-
         "url": "https://doc.morningstar.com/Document/4f52f27ea4f6c99385c03240a3752723.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
       },
-
       {
         "id": "487508363",
-
         "type": "Prospectus",
-
         "url": "https://doc.morningstar.com/Document/bacf7c54fc423e00c9ae7105dccaa81f.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
       }
     ],
-
     "portfolio": {
       "asset": [
         {
           "label": "Stock",
-
           "value": 55.82681
         },
-
         {
           "label": "Bond",
-
           "value": 35.29226
         },
-
         {
           "label": "Cash",
-
           "value": 8.6057
         },
-
         {
           "label": "Other",
-
           "value": 1.48948
         },
-
         {
           "label": "Property",
-
           "value": 0
         }
       ],
-
       "top10Holdings": [
         {
           "name": "Vanguard FTSE UKAllShrIdxUnitTrInsPl£Acc",
-
           "weighting": 14.97099
         },
-
         {
           "name": "HSBC MSCI Emerg Mkts ETF",
-
           "weighting": 13.16438
         },
-
         {
           "name": "Vanguard UK Invm Grd Bd Idx Ins Pl £ Acc",
-
           "weighting": 12.47447
         },
-
         {
           "name": "SPDR S&P 500 ETF USD Acc",
-
           "weighting": 9.93923
         },
-
         {
           "name": "iShares ESG Ovrs Corp Bd Idx (UK) S Acc",
-
           "weighting": 6.9801
         },
-
         {
           "name": "Amundi IS Prime Japan ETF DR",
-
           "weighting": 6.03751
         },
-
         {
           "name": "iShares Core MSCI EM IMI ETF USD Acc",
-
           "weighting": 3.4346
         },
-
         {
           "name": "Vanguard USD EmMktsGovBd UCITS ETF",
-
           "weighting": 3.02736
         },
-
         {
           "name": "Vanguard FTSE Dev €pe exUKEqIdxInsPl£Acc",
-
           "weighting": 2.98955
         },
-
         {
           "name": "Invesco GBP Corporate Bond ETF Dist",
-
           "weighting": 2.59399
         }
       ]
