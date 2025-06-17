@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 interface IStrategySelector {
   investmentStrategies: {
     name: string;
@@ -8,26 +12,37 @@ interface IStrategySelector {
   }[];
 }
 
-const StrategySelector = ({ investmentStrategies }: IStrategySelector) => (
-  <>
-    {investmentStrategies.map(({ name, fundOptions }) => (
-      <div key={name}>
-        <button>{name}</button>
-        {/* todo remove inline styles */}
-        <div
-          style={{
-            border: '1px solid red',
-            display: 'flex',
-            justifyContent: 'space-around',
-          }}
-        >
-          {fundOptions.map(({ fundName, id }) => (
-            <button key={id}>{fundName}</button>
-          ))}
-        </div>
-      </div>
-    ))}
-  </>
-);
+const StrategySelector = ({ investmentStrategies }: IStrategySelector) => {
+  const [selectedStrategyIndex, setSelectedStrategyIndex] = useState<
+    number | undefined
+  >(undefined);
 
+  const [selectedFundIndex, setSelectedFundIndex] = useState<
+    number | undefined
+  >(undefined);
+
+  return (
+    <>
+      {investmentStrategies.map(({ name }, index) => (
+        <button key={name} onClick={() => setSelectedStrategyIndex(index)}>
+          {name}
+        </button>
+      ))}
+      {selectedStrategyIndex !== undefined && (
+        <div>
+          {investmentStrategies[selectedStrategyIndex].fundOptions.map(
+            ({ fundName }, index) => (
+              <button
+                key={fundName}
+                onClick={() => setSelectedFundIndex(index)}
+              >
+                {fundName}
+              </button>
+            ),
+          )}
+        </div>
+      )}
+    </>
+  );
+};
 export default StrategySelector;
