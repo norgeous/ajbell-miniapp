@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    value: 33.3333,
+    values: undefined,
   },
 };
 

@@ -23,25 +23,23 @@ const demo = [
   }
 ];
 
-// these demo numbers add up to 101.21425 ????
 
 interface IPieSlice {
   value: number; // size in percent of slice
-  offset: number; // total of previous percents, used for rotational offset
+  offsetDeg: number; // degrees of rotation of this slice
 }
 
-const percentToDeg = (percent:number) => (percent / 100) * 360;
 
-const PieSlice = ({ value, offset }:IPieSlice) => (
+const PieSlice = ({ value, offsetDeg }:IPieSlice) => (
   <circle
     r="25"
     cx="50"
     cy="50"
     fill="transparent"
-    transform={`rotate(${-90 + percentToDeg(offset)} 50 50)`}
-    stroke="rgba(255,0,255,0.25)"
-    stroke-width="50"
-    stroke-dasharray={`${((value * circumference) / 100)} ${circumference}`}
+    transform={`rotate(${-90 + offsetDeg} 50 50)`}
+    stroke="rgba(255,0,255)"
+    strokeWidth="50"
+    strokeDasharray={`${((value * circumference) / 100)} ${circumference}`}
   />
 );
 
@@ -50,44 +48,41 @@ type PieValues = {
   value: number;
 }
 
+
+const percentToDeg = (percent:number) => (percent / 100) * 360;
+
 const adapt = (values:PieValues[]) => {
-  const {
-    valuesWithOffsets,
-  } = values.reduce((acc, item) => {
-    const totalOffset = acc.totalOffset + item.value;
-    return ({
-      totalOffset: totalOffset,
-      valuesWithOffsets: [
-        ...acc.valuesWithOffsets,
-        {
-          ...item,
-          offset: acc.totalOffset,
-        },
-      ],
-    });
-  }, {
-    totalOffset: 0,
-    valuesWithOffsets: [],
+  // calculate normalisation scale factor, so in the case when all values don't total up to 100, we can normalise the values
+  const total = values.reduce((acc,{ value }) => acc + value, 0);
+  const normalisationMultiplier = 100 / total;
+
+  // calculate offsets and apply normalisationMultiplier
+  const newValues = values.map((item, index) => {
+    const total = values.slice(0,index).reduce((acc,{ value }) => acc + value, 0) * normalisationMultiplier;
+
+    console.log({index, total})
+    const normalisedValue = item.value * normalisationMultiplier;
+    return {
+      ...item,
+      normalisedValue,
+      offsetDeg: percentToDeg(total),
+    };
   });
 
-  return valuesWithOffsets;
+  return newValues;
 }
 
 interface IPieChart {
   values: PieValues[];
 }
 
-const PieChart = ({ values = demo }:IPieChart) => {
-  const valuesWithOffsets = adapt(values);
-
-  return (
-    <svg width="100" height="100">
-      <circle r="50" cx="50" cy="50" fill="lightgrey" />
-      {valuesWithOffsets.map(({ label, value, offset }) => (
-        <PieSlice key={label} value={value} offset={offset} />
-      ))}
-    </svg>
-  );
-};
+const PieChart = ({ values = demo }:IPieChart) => (
+  <svg width="100" height="100">
+    <circle r="50" cx="50" cy="50" fill="lightgrey" />
+    {adapt(values).map(({ label, value, offsetDeg }) => (
+      <PieSlice key={label} value={value} offsetDeg={offsetDeg} />
+    ))}
+  </svg>
+);
 
 export default PieChart;
