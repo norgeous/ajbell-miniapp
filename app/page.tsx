@@ -14,13 +14,15 @@ export default function Home() {
         <StarRating value={4} />
         <StarRating value={5} />
         <StarRating value={7} max={10} />
+
         <GradientRating value={3} max={5} />
         <GradientRating value={7} />
         <GradientRating value={17} max={20} />
-        <PieChart />
+
         <PieChart values={[{label:'one',value:50},{label:'two',value:50}]}/>
         <PieChart values={[{label:'one',value:33.33333},{label:'two',value:33.33333},{label:'thr',value:33.33333}]}/>
-
+        <PieChart values={[{label:'one',value:25},{label:'two',value:25},{label:'thr',value:25},{label:'fou',value:25}]}/>
+        <PieChart />
 
       </main>
       <footer className={styles.footer}>

@@ -7,12 +7,14 @@ interface IPieSlice {
 }
 
 const sliceColors = [
-  'red',
-  'green',
-  'blue',
-  'cyan',
-  'magenta',
-  'yellow',
+  'oklch(.66 .15 45)',
+  'oklch(.66 .15 135)',
+  'oklch(.66 .15 225)',
+  'oklch(.66 .15 315)',
+  'oklch(.66 .15 0)',
+  'oklch(.66 .15 90)',
+  'oklch(.66 .15 180)',
+  'oklch(.66 .15 270)',
 ];
 
 const PieSlice = ({ index, value, offsetDeg }:IPieSlice) => (
