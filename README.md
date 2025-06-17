@@ -30,6 +30,7 @@ npm install
 - [ ] Tests
 - [ ] Caching / SSR
 - [ ] a11y (esp. of graphs)
+- [ ] CI
 
 - [x] Aesthetic presentation of the data
 - [ ] Clarity and simplicity of code
