@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import GradientRating from '.';
 
 const meta = {
-  title: 'Example/GradientRating',
+  title: 'Components/GradientRating',
   component: GradientRating,
   tags: ['autodocs'],
 } satisfies Meta<typeof GradientRating>;

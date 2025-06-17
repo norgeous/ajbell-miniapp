@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import StarRating from '.';
 
 const meta = {
-  title: 'Example/StarRating',
+  title: 'Components/StarRating',
   component: StarRating,
   tags: ['autodocs'],
 } satisfies Meta<typeof StarRating>;

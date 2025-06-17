@@ -5,7 +5,7 @@ import balancedMockData from '@/mocks/Balanced.json';
 import adventurousMockData from '@/mocks/Adventurous.json';
 
 const meta = {
-  title: 'Example/PieChart',
+  title: 'Components/PieChart',
   component: PieChart,
   tags: ['autodocs'],
 } satisfies Meta<typeof PieChart>;
