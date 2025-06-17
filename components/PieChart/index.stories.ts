@@ -13,63 +13,102 @@ type Story = StoryObj<typeof meta>;
 export const Whole: Story = {
   args: {
     values: [
-      { label: 'one', value: 100}],
+      { label: 'A', value: 100 },
+    ],
   },
 };
 
 export const Halfs: Story = {
   args: {
     values: [
-      { label: 'one', value: 50},{label:'two',value:50}],
+      { label: 'A', value: 50 },
+      { label: 'B', value: 50 },
+    ],
   },
 };
 
 export const Thirds: Story = {
   args: {
     values: [
-      { label: 'one', value: 33.33333},{label:'two',value:33.33333},{label:'thr',value:33.33333}],
+      { label: 'A', value: 33.33333 },
+      { label: 'B', value: 33.33333 },
+      { label: 'C', value: 33.33333 },
+    ],
   },
 };
 
 export const Quarters: Story = {
   args: {
     values: [
-      { label: 'one', value: 25},{label:'two',value:25},{label:'thr',value:25},{label:'fou',value:25}],
+      { label: 'A', value: 25 },
+      { label: 'B', value: 25 },
+      { label: 'C', value: 25 },
+      { label: 'D', value: 25 },
+    ],
   },
 };
 
 export const Fifths: Story = {
   args: {
     values: [
-      { label: 'one', value: 20},{label:'two',value:20},{label:'thr',value:20},{label:'fou',value:20},{label:'fiv',value:20}],
+      { label: 'A', value: 20 },
+      { label: 'B', value: 20 },
+      { label: 'C', value: 20 },
+      { label: 'D', value: 20 },
+      { label: 'E', value: 20 },
+    ],
   },
 };
 
 export const Sixths: Story = {
   args: {
     values: [
-      { label: 'one', value: 100/6},{label:'two',value:100/6},{label:'thr',value:100/6},{label:'fou',value:100/6},{label:'fiv',value:100/6},{label:'six',value:100/6}],
+      { label: 'A', value: 100/6 },
+      { label: 'B', value: 100/6 },
+      { label: 'C', value: 100/6 },
+      { label: 'D', value: 100/6 },
+      { label: 'E', value: 100/6 },
+      { label: 'F', value: 100/6 },
+    ],
   },
 };
 
 export const Sevenths: Story = {
   args: {
     values: [
-      { label: 'one', value: 100/7},{label:'two',value:100/7},{label:'thr',value:100/7},{label:'fou',value:100/7},{label:'fiv',value:100/7},{label:'six',value:100/7},{label:'sev',value:100/7}],
+      { label: 'A', value: 100/7 },
+      { label: 'B', value: 100/7 },
+      { label: 'C', value: 100/7 },
+      { label: 'D', value: 100/7 },
+      { label: 'E', value: 100/7 } ,
+      { label: 'F', value: 100/7 },
+      { label: 'G', value: 100/7 },
+    ],
   },
 };
 
 export const Eighths: Story = {
   args: {
     values: [
-      { label: 'one', value: 100/8},{label:'two',value:100/8},{label:'thr',value:100/8},{label:'fou',value:100/8},{label:'fiv',value:100/8},{label:'six',value:100/8},{label:'sev',value:100/8},{label:'eig',value:100/8}],
+      { label: 'A', value: 100/8 },
+      { label: 'B', value: 100/8 },
+      { label: 'C', value: 100/8 },
+      { label: 'D', value: 100/8 },
+      { label: 'E', value: 100/8 },
+      { label: 'F', value: 100/8 },
+      { label: 'G', value: 100/8 },
+      { label: 'H', value: 100/8 },
+    ],
   },
 };
 
 export const NormalisationOf3Halfs: Story = {
   args: {
     values: [
-      { label: 'one', value: 50},{label:'two',value:50},{label:'thr',value:50}],
+      { label: 'A', value: 50 },
+      { label: 'B', value: 50 },
+      { label: 'C', value: 50 },
+    ],
   },
 };
 

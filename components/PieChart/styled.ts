@@ -37,3 +37,13 @@ export const Slice = styled.circle<ISlice>`
   transform-origin: 50% 50%;
   stroke-dasharray: ${({value})=>`${((value * circumference) / 100)} ${circumference}`};
 `;
+
+interface ILegendColor {
+  index: number;
+}
+
+export const LegendColor = styled.div<ILegendColor>`
+  width: 18px;
+  height: 18px;
+  background: ${({ index }) => sliceColors[index] || 'red'};
+`;
