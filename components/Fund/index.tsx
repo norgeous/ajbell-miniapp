@@ -25,13 +25,10 @@ const Fund = ({ data }: IFund) => {
       <GradientRating value={data.data.ratings.SRRI} />
       <div>{data.data.ratings.analystRatingLabel}</div>
       <div>
-        {data.data.quote.currency}
-        {data.data.quote.lastPrice}
+        {data.data.quote.currency} {data.data.quote.lastPrice}
       </div>
-      <div>
-        {data.data.quote.currency}
-        {data.data.quote.ongoingCharge}
-      </div>
+      <div>{data.data.quote.lastPriceDate}</div>
+      <div>Ongoing charge: {data.data.quote.ongoingCharge}%</div>
       <PieChart values={data.data.portfolio.asset} />
       {data.data.documents.map(({ id, type, url }) => (
         <ExternalLink key={id} href={url}>
@@ -40,7 +37,10 @@ const Fund = ({ data }: IFund) => {
       ))}
       <DataTable
         headings={['Holding', 'Weight']}
-        data={data.data.portfolio.top10Holdings}
+        data={data.data.portfolio.top10Holdings.map(({ name, weighting }) => ({
+          name,
+          weighting: `${weighting.toFixed(2)}%`,
+        }))}
       />
       <hr />
       <pre>{JSON.stringify(data, null, 2)}</pre>
