@@ -29,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  padding: 10em;
+  padding: 5em;
 
   background-image:
     linear-gradient(hsl(from hsl(243, 26%, 15%) h s l / 0.7) 0 0),
