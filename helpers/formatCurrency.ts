@@ -1,10 +1,11 @@
 const currencySymbols = {
   GBX: '£',
+  YEN: '¥',
 };
 
-const formatCurrency = (
-  amount: number,
-  currencyId: keyof typeof currencySymbols = 'GBX',
-) => `${currencySymbols[currencyId]}${amount.toFixed(2)}`;
+export type CurrencyType = keyof typeof currencySymbols;
+
+const formatCurrency = (amount: number, currencyId: CurrencyType = 'GBX') =>
+  `${currencySymbols[currencyId]}${amount.toFixed(2)}`;
 
 export default formatCurrency;

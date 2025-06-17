@@ -1,3 +1,5 @@
+import { CurrencyType } from './formatCurrency';
+
 export type AJBellResponseType = {
   data: {
     quote: {
@@ -8,7 +10,7 @@ export type AJBellResponseType = {
       lastPriceDate: string;
       ongoingCharge: number;
       sectorName: string;
-      currency: 'GBX';
+      currency: CurrencyType;
     };
     profile: {
       objective: string;
