@@ -19,7 +19,9 @@ const Fund = ({ data }: IFund) => {
       <div>{data.data.quote.sectorName}</div>
       <p>{data.data.profile.objective}</p>
       <StarRating value={data.data.ratings.analystRating} />
-      <GradientRating value={data.data.ratings.SRRI} />
+      {data.data.ratings.SRRI && (
+        <GradientRating value={data.data.ratings.SRRI} />
+      )}
       <div>{data.data.ratings.analystRatingLabel}</div>
       <div>
         Last Price:{' '}

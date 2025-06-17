@@ -17,7 +17,7 @@ export type AJBellResponseType = {
     };
     ratings: {
       analystRating: number;
-      SRRI: number;
+      SRRI: number | null;
       analystRatingLabel: string;
     };
     documents: {

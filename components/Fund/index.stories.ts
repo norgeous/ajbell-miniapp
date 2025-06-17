@@ -3,6 +3,7 @@ import Fund from '.';
 import cautiousMockData from '@/mocks/Cautious.json';
 import balancedMockData from '@/mocks/Balanced.json';
 import adventurousMockData from '@/mocks/Adventurous.json';
+import { AJBellResponseType } from '@/helpers/endpoint';
 
 const meta = {
   title: 'Pages/Fund',
@@ -16,20 +17,20 @@ type Story = StoryObj<typeof meta>;
 // from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RV9.json
 export const Cautious: Story = {
   args: {
-    data: cautiousMockData,
+    data: cautiousMockData as AJBellResponseType,
   },
 };
 
 // from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RX1.json
 export const Balanced: Story = {
   args: {
-    data: balancedMockData,
+    data: balancedMockData as AJBellResponseType,
   },
 };
 
 // from https://cdn.core3-dev.ajbbuild.uk/interview/BYW8VG2.json
 export const Adventurous: Story = {
   args: {
-    data: adventurousMockData,
+    data: adventurousMockData as AJBellResponseType,
   },
 };
