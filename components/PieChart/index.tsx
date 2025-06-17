@@ -78,7 +78,6 @@ interface IPieChart {
 
 const PieChart = ({ values = demo }:IPieChart) => (
   <svg width="100" height="100">
-    <circle r="50" cx="50" cy="50" fill="lightgrey" />
     {adapt(values).map(({ label, value, offsetDeg }) => (
       <PieSlice key={label} value={value} offsetDeg={offsetDeg} />
     ))}
