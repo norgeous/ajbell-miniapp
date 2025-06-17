@@ -37,7 +37,7 @@ const PieSlice = ({ value, offsetDeg }:IPieSlice) => (
     cy="50"
     fill="transparent"
     transform={`rotate(${-90 + offsetDeg} 50 50)`}
-    stroke="rgba(255,0,255)"
+    stroke={`rgb(${(offsetDeg / 360) * 255}, 0, 255)`}
     strokeWidth="50"
     strokeDasharray={`${((value * circumference) / 100)} ${circumference}`}
   />
