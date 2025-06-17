@@ -1,16 +1,24 @@
-import { FaStar, FaRegStar } from 'react-icons/fa6';
-
 interface IPieChart {
   value: number;
-  max?: number;
 }
 
-const PieChart = ({ value, max = 5 }:IPieChart) => {
+const circumference = (Math.PI * 2) * 25;
+
+const PieChart = ({ value }:IPieChart) => {
   return (
-    <div>
-      {Array.from({ length: value }, (_, i) => <FaStar key={i} />)}
-      {Array.from({ length: max - value }, (_, i) => <FaRegStar key={i} />)}
-    </div>
+    <svg width="100" height="100">
+      <circle r="50" cx="50" cy="50" fill="lightgrey" />
+      <circle
+        r="25"
+        cx="50"
+        cy="50"
+        fill="transparent"
+        transform="rotate(-90 50 50)"
+        stroke="tomato"
+        stroke-width="50"
+        stroke-dasharray={`${((value * circumference) / 100)} ${circumference}`}
+      />
+    </svg>
   );
 };
 
