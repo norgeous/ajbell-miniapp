@@ -16,7 +16,7 @@ const adaptPieValues = (values: PieValues[]) => {
     return {
       ...item,
       normalisedValue,
-      offsetDeg: percentToDeg(total),
+      offset: percentToDeg(total),
     };
   });
 

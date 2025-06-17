@@ -18,12 +18,12 @@ const PieChart = ({ values }: IPieChart) => {
   return (
     <Wrapper>
       <Svg width="100" height="100" viewBox="0 0 100 100">
-        {adpatedValues.map(({ label, normalisedValue, offsetDeg }, index) => (
+        {adpatedValues.map(({ label, normalisedValue, offset }, index) => (
           <PieSlice
             key={label}
             index={index}
             value={normalisedValue}
-            offsetDeg={offsetDeg}
+            offset={offset}
           />
         ))}
       </Svg>
