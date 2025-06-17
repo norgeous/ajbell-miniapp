@@ -84,6 +84,3 @@ export const RealData1: Story = {
     ],
   },
 };
-
-
-
