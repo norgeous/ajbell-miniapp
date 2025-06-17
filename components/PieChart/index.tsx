@@ -1,6 +1,7 @@
 import adaptPieValues from './adapter';
 import PieSlice from './PieSlice';
-import { Svg, Table, Tr, Td, LegendColor } from './styled';
+import { Svg, LegendColor } from './styled';
+import { Table, Tr, Td } from '@/components/Table';
 
 export type PieValues = {
   label: string;
