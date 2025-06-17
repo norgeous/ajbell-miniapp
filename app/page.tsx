@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import styles from './page.module.css';
+
 import StarRating from '@/components/StarRating';
 import GradientRating from '@/components/GradientRating';
 import PieChart from '@/components/PieChart';
