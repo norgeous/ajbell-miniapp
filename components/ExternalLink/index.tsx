@@ -7,6 +7,7 @@ interface IExternalLink {
 }
 
 const ExternalLink = ({ href, children }: IExternalLink) => (
+  // todo remove inline styles
   <a href={href} target="_blank" style={{ display: 'block' }}>
     {children} <FaExternalLinkAlt />
   </a>

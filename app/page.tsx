@@ -1,3 +1,4 @@
+import StrategySelector from '@/components/StrategySelector';
 import Fund from '@/components/Fund';
 import cautiousMockData from '@/mocks/Cautious.json';
 
@@ -5,21 +6,21 @@ const investmentStrategies = [
   {
     name: 'Growth Funds Variations',
     fundOptions: [
-      { name: 'Cautious', endpointId: 'BYW8RV9' },
-      { name: 'Balanced', endpointId: 'BYW8RX1' },
-      { name: 'Adventurous', endpointId: 'BYW8VG2' },
+      { id: 'BYW8RV9', fundName: 'Cautious' },
+      { id: 'BYW8RX1', fundName: 'Balanced' },
+      { id: 'BYW8VG2', fundName: 'Adventurous' },
     ],
   },
   {
     name: 'Responsible Growth Fund',
-    fundOptions: [{ name: 'Responsible', endpointId: 'BN0S2V9' }],
+    fundOptions: [{ id: 'BN0S2V9', fundName: 'Responsible' }],
   },
 ];
 
 const Home = () => {
   return (
     <>
-      <pre>{JSON.stringify(investmentStrategies, null, 2)}</pre>
+      <StrategySelector investmentStrategies={investmentStrategies} />
       <Fund data={cautiousMockData} />
     </>
   );
