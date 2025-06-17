@@ -1,0 +1,105 @@
+{
+  "data": {
+    "quote": {
+      "__typename": "Fund",
+      "name": "VT AJ Bell Adventurous I Acc",
+      "marketCode": "FUND:BYW8VG2",
+      "lastPrice": 168.202,
+      "lastPriceDate": "2024-06-04",
+      "ongoingCharge": 0.31,
+      "sectorName": "Flexible Investment",
+      "currency": "GBX"
+    },
+    "profile": {
+      "objective": "The investment objective of the fund is to achieve long-term capital growth with a preference (often indirect) towards higher risk assets such as equities and less emphasis on defensive assets such as cash, fixed interest securities, money-market funds and collective investment schemes following alternative strategies such as property and commodities. This is to keep the Fund within a pre-determined risk profile. The Fund will seek to achieve its objective (and so provide exposure to the asset classes noted in the objective) by investing predominantly (80% +), in index-tracking investments or strategies (those instruments and/or investment strategies that aim to track the performance of various financial indices) and which typically consist of collective investment schemes (including those managed or operated by the ACD) as well as equities, bonds and transferable securities."
+    },
+    "ratings": {
+      "analystRating": 4,
+      "SRRI": 5,
+      "analystRatingLabel": "Neutral"
+    },
+    "documents": [
+      {
+        "id": "511596540",
+        "type": "Factsheet",
+        "url": "https://doc.morningstar.com/Document/096cacbcfeea70762c8c5d55263351e7.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
+      },
+      {
+        "id": "504731612",
+        "type": "KIID",
+        "url": "https://doc.morningstar.com/Document/f95e99bcd2afd7b102bee657aa486cf4.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
+      },
+      {
+        "id": "487508363",
+        "type": "Prospectus",
+        "url": "https://doc.morningstar.com/Document/bacf7c54fc423e00c9ae7105dccaa81f.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
+      }
+    ],
+    "portfolio": {
+      "asset": [
+        {
+          "label": "Stock",
+          "value": 85.0684
+        },
+        {
+          "label": "Bond",
+          "value": 11.11107
+        },
+        {
+          "label": "Cash",
+          "value": 3.65583
+        },
+        {
+          "label": "Other",
+          "value": 1.52162
+        },
+        {
+          "label": "Property",
+          "value": 0
+        }
+      ],
+      "top10Holdings": [
+        {
+          "name": "Vanguard FTSE UKAllShrIdxUnitTrInsPl£Acc",
+          "weighting": 18.7558
+        },
+        {
+          "name": "SPDR S&P 500 ETF USD Acc",
+          "weighting": 18.12285
+        },
+        {
+          "name": "HSBC MSCI Emerg Mkts ETF",
+          "weighting": 14.42347
+        },
+        {
+          "name": "iShares Core MSCI EM IMI ETF USD Acc",
+          "weighting": 10.07244
+        },
+        {
+          "name": "Lyxor Core UK Eq All Cap (DR) ETF Dist",
+          "weighting": 6.47119
+        },
+        {
+          "name": "Amundi IS Prime Japan ETF DR",
+          "weighting": 5.95503
+        },
+        {
+          "name": "Xtrackers S&P Europe Ex UK ETF 1D",
+          "weighting": 4.32342
+        },
+        {
+          "name": "iShares $ HY Corp Bd ESG ETF GBP H Dist",
+          "weighting": 3.72072
+        },
+        {
+          "name": "SSGA SttStrtGlbHiYldBdESGScrnIdxIGBPIncH",
+          "weighting": 3.10303
+        },
+        {
+          "name": "Vanguard USD EmMktsGovBd UCITS ETF",
+          "weighting": 3.01774
+        }
+      ]
+    }
+  }
+}
