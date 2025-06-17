@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 const Wrap = styled.div`
   display: flex;
   gap: 2px;
+  min-width: 200px;
 `;
 
 const Piece = styled.span`
@@ -14,7 +15,7 @@ const Piece = styled.span`
   background-size: ${({ max }) => max * 100}%;
   background-position: ${({ index, max }) => (100 / max) * index}%;
   ${({ selected }) => selected && css`
-    background: white;
+    background: lightblue;
   `}
 `;
 
