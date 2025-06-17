@@ -24,6 +24,7 @@ npm install
   - [x] analystRating, is displayed as a star rating between 0-5. (StarRating)
   - [x] SRRI, is a sliding measure of risk between 0-10 where 10 zero is low risk, 10 is very high risk. (GradientRating)
   - [x] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages. (PieChart)
+- [ ] Use of local storage to save the user’s fund selection
 - [ ] Error handling
 - [ ] Caching / SSR
 - [ ] Tests
@@ -32,7 +33,6 @@ npm install
 - [ ] Use of relevant frameworks for JS, CSS
 - [ ] Aesthetic presentation of the data
 - [ ] Mobile responsiveness
-- [ ] Use of local storage to save the user’s fund selection
 - [ ] Front-end performance
 - [ ] a11y (esp. of graphs)
 
