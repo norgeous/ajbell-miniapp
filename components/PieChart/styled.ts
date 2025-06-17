@@ -2,6 +2,16 @@
 
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
 const sliceColors = [
   'oklch(.66 .15 0)',
   'oklch(.66 .15 90)',
@@ -18,7 +28,6 @@ export const Svg = styled.svg`
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 250px;
 `;
 
 const circumference = Math.PI * 2 * 25;

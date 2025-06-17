@@ -2,7 +2,7 @@ import formatPercent from '@/helpers/formatPercent';
 import DataTable from '@/components/Table';
 import adaptPieValues from './adapter';
 import PieSlice from './PieSlice';
-import { Svg, LegendColor } from './styled';
+import { Wrapper, Svg, LegendColor } from './styled';
 
 export type PieValues = {
   label: string;
@@ -16,7 +16,7 @@ interface IPieChart {
 const PieChart = ({ values }: IPieChart) => {
   const adpatedValues = adaptPieValues(values);
   return (
-    <>
+    <Wrapper>
       <Svg width="100" height="100" viewBox="0 0 100 100">
         {adpatedValues.map(({ label, normalisedValue, offsetDeg }, index) => (
           <PieSlice
@@ -38,7 +38,7 @@ const PieChart = ({ values }: IPieChart) => {
           value: formatPercent(value),
         }))}
       />
-    </>
+    </Wrapper>
   );
 };
 
