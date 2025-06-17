@@ -42,8 +42,8 @@ const Fund = ({ data }: IFund) => {
           weighting: formatPercent(weighting),
         }))}
       />
-      <hr />
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {/* <hr />
+      <pre>{JSON.stringify(data, null, 2)}</pre> */}
     </>
   );
 };
