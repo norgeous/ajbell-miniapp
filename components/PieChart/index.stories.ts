@@ -42,7 +42,7 @@ export const sixths: Story = {
 
 export const sevenths: Story = {
   args: {
-    values: [{label:'one',value:100/8},{label:'two',value:100/7},{label:'thr',value:100/7},{label:'fou',value:100/7},{label:'fiv',value:100/7},{label:'six',value:100/7},{label:'sev',value:100/7}],
+    values: [{label:'one',value:100/7},{label:'two',value:100/7},{label:'thr',value:100/7},{label:'fou',value:100/7},{label:'fiv',value:100/7},{label:'six',value:100/7},{label:'sev',value:100/7}],
   },
 };
 
