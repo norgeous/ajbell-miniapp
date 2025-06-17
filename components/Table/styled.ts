@@ -8,9 +8,10 @@ export const Table = styled.table`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 100px;
 `;
 
-export const Tr = styled.table`
+export const Tr = styled.tr`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +19,7 @@ export const Tr = styled.table`
 `;
 
 // todo text overflow
-export const Td = styled.table`
+export const Td = styled.td`
   display: flex;
   align-items: center;
   gap: 4px;
