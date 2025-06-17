@@ -6,6 +6,7 @@ import DataTable from '../Table';
 
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import formatCurrency from '@/helpers/formatCurrency';
+import formatPercent from '@/helpers/formatPercent';
 
 const ExternalLink = ({ href, children }) => (
   <a href={href} target="_blank" style={{ display: 'block' }}>
@@ -42,7 +43,7 @@ const Fund = ({ data }: IFund) => {
         headings={['Holding', 'Weight']}
         data={data.data.portfolio.top10Holdings.map(({ name, weighting }) => ({
           name,
-          weighting: `${weighting.toFixed(2)}%`,
+          weighting: formatPercent(weighting),
         }))}
       />
       <hr />
