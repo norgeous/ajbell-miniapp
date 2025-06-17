@@ -8,8 +8,8 @@ interface IPieChart {
 
 const PieChart = ({ values = demo }:IPieChart) => (
   <svg width="100" height="100">
-    {adaptPieValues(values).map(({ label, value, offsetDeg }) => (
-      <PieSlice key={label} value={value} offsetDeg={offsetDeg} />
+    {adaptPieValues(values).map(({ label, value, offsetDeg }, index) => (
+      <PieSlice key={label} index={index} value={value} offsetDeg={offsetDeg} />
     ))}
   </svg>
 );
