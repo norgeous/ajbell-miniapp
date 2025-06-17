@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -15,22 +14,28 @@ interface IStrategySelector {
       id: string;
     }[];
   }[];
+  selectedStrategyIndex: number | undefined;
+  setSelectedStrategyIndex: (i: number) => void;
+  setSelectedFundIndex: (i: number) => void;
 }
 
-const StrategySelector = ({ investmentStrategies }: IStrategySelector) => {
-  const [selectedStrategyIndex, setSelectedStrategyIndex] = useState<
-    number | undefined
-  >(undefined);
-
-  const [selectedFundIndex, setSelectedFundIndex] = useState<
-    number | undefined
-  >(undefined);
-
+const StrategySelector = ({
+  investmentStrategies,
+  selectedStrategyIndex,
+  setSelectedStrategyIndex,
+  setSelectedFundIndex,
+}: IStrategySelector) => {
   return (
     <>
       <div>
         {investmentStrategies.map(({ name }, index) => (
-          <Button key={name} onClick={() => setSelectedStrategyIndex(index)}>
+          <Button
+            key={name}
+            onClick={() => {
+              setSelectedStrategyIndex(index);
+              setSelectedFundIndex(undefined);
+            }}
+          >
             {name}
           </Button>
         ))}
