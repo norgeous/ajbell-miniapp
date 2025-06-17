@@ -1,3 +1,4 @@
+import formatDate from '@/helpers/formatDate';
 import GradientRating from '../GradientRating';
 import PieChart from '../PieChart';
 import StarRating from '../StarRating';
@@ -25,9 +26,9 @@ const Fund = ({ data }: IFund) => {
       <GradientRating value={data.data.ratings.SRRI} />
       <div>{data.data.ratings.analystRatingLabel}</div>
       <div>
-        {data.data.quote.currency} {data.data.quote.lastPrice}
+        last price: {data.data.quote.currency} {data.data.quote.lastPrice} (
+        {formatDate(data.data.quote.lastPriceDate)})
       </div>
-      <div>{data.data.quote.lastPriceDate}</div>
       <div>Ongoing charge: {data.data.quote.ongoingCharge}%</div>
       <PieChart values={data.data.portfolio.asset} />
       {data.data.documents.map(({ id, type, url }) => (
