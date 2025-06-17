@@ -1,7 +1,7 @@
 import adaptPieValues from './adapter';
 import PieSlice from './PieSlice';
 import { Svg, LegendColor } from './styled';
-import { Table, Tr, Td } from '@/components/Table';
+import DataTable from '@/components/Table';
 
 export type PieValues = {
   label: string;
@@ -26,17 +26,17 @@ const PieChart = ({ values }: IPieChart) => {
           />
         ))}
       </Svg>
-      <Table>
-        {adpatedValues.map(({ label, value }, index) => (
-          <Tr key={label}>
-            <Td>
+      <DataTable
+        data={values.map(({ label, value }, index) => ({
+          label: (
+            <>
               <LegendColor index={index} />
-              <div>{label}</div>
-            </Td>
-            <Td align="right">{value.toFixed(2)}%</Td>
-          </Tr>
-        ))}
-      </Table>
+              {label}
+            </>
+          ),
+          value: `${value.toFixed(2)}%`,
+        }))}
+      />
     </>
   );
 };

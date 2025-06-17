@@ -1,7 +1,7 @@
 import { Table, Tr, Td } from './styled';
 
 interface IDataTable {
-  headings: string[];
+  headings?: string[];
   data: object[];
 }
 
@@ -9,11 +9,7 @@ const adapt = (data: object[]) => data.map(item => Object.values(item));
 
 const DataTable = ({ headings, data }: IDataTable) => (
   <Table>
-    <Tr>
-      {headings.map(heading => (
-        <th key={heading}>{heading}</th>
-      ))}
-    </Tr>
+    <Tr>{headings?.map(heading => <th key={heading}>{heading}</th>)}</Tr>
     {adapt(data).map((row, indexRow) => (
       <Tr key={indexRow}>
         {row.map((cell, indexCell) => (
@@ -25,4 +21,3 @@ const DataTable = ({ headings, data }: IDataTable) => (
 );
 
 export default DataTable;
-export { Table, Tr, Td };
