@@ -66,7 +66,7 @@ export const Eighths: Story = {
   },
 };
 
-export const Normalisation: Story = {
+export const NormalisationOf3Halfs: Story = {
   args: {
     values: [
       { label: 'one', value: 50},{label:'two',value:50},{label:'thr',value:50}],
