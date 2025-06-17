@@ -6,6 +6,7 @@ interface IStarRating {
 }
 
 const StarRating = ({ value, max = 5 }: IStarRating) => {
+  // todo: normalise value and max, it has some strange behaviour currently
   return (
     <div>
       {Array.from({ length: value }, (_, i) => (

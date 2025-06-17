@@ -17,6 +17,7 @@ export const Tr = styled.table`
   gap: 4px;
 `;
 
+// todo text overflow
 export const Td = styled.table`
   display: flex;
   align-items: center;
