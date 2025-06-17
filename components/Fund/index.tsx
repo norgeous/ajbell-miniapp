@@ -1,18 +1,12 @@
 import formatDate from '@/helpers/formatDate';
-import GradientRating from '../GradientRating';
-import PieChart from '../PieChart';
-import StarRating from '../StarRating';
-import DataTable from '../Table';
-
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import formatCurrency from '@/helpers/formatCurrency';
 import formatPercent from '@/helpers/formatPercent';
 
-const ExternalLink = ({ href, children }) => (
-  <a href={href} target="_blank" style={{ display: 'block' }}>
-    {children} <FaExternalLinkAlt />
-  </a>
-);
+import GradientRating from '@/components/GradientRating';
+import PieChart from '@/components/PieChart';
+import StarRating from '@/components/StarRating';
+import DataTable from '@/components/Table';
+import ExternalLink from '@/components/ExternalLink';
 
 interface IFund {
   data: any;
