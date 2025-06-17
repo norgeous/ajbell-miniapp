@@ -1,6 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  padding: 1em;
+`;
 
 interface IStrategySelector {
   investmentStrategies: {
@@ -23,21 +28,23 @@ const StrategySelector = ({ investmentStrategies }: IStrategySelector) => {
 
   return (
     <>
-      {investmentStrategies.map(({ name }, index) => (
-        <button key={name} onClick={() => setSelectedStrategyIndex(index)}>
-          {name}
-        </button>
-      ))}
+      <div>
+        {investmentStrategies.map(({ name }, index) => (
+          <Button key={name} onClick={() => setSelectedStrategyIndex(index)}>
+            {name}
+          </Button>
+        ))}
+      </div>
       {selectedStrategyIndex !== undefined && (
         <div>
           {investmentStrategies[selectedStrategyIndex].fundOptions.map(
             ({ fundName }, index) => (
-              <button
+              <Button
                 key={fundName}
                 onClick={() => setSelectedFundIndex(index)}
               >
                 {fundName}
-              </button>
+              </Button>
             ),
           )}
         </div>
@@ -45,4 +52,5 @@ const StrategySelector = ({ investmentStrategies }: IStrategySelector) => {
     </>
   );
 };
+
 export default StrategySelector;
