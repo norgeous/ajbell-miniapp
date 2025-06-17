@@ -21,7 +21,7 @@ export const Svg = styled.svg`
   max-width: 250px;
 `;
 
-const circumference = (Math.PI * 2) * 25;
+const circumference = Math.PI * 2 * 25;
 
 export interface ISlice {
   index: number;
@@ -35,7 +35,29 @@ export const Slice = styled.circle<ISlice>`
   stroke-width: 50px;
   transform: ${({ offsetDeg }) => `rotate(${-90 + offsetDeg}deg)`};
   transform-origin: 50% 50%;
-  stroke-dasharray: ${({value})=>`${((value * circumference) / 100)} ${circumference}`};
+  stroke-dasharray: ${({ value }) =>
+    `${(value * circumference) / 100} ${circumference}`};
+`;
+
+export const Table = styled.table`
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const Tr = styled.table`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+`;
+
+export const Td = styled.table`
+  display: flex;
+  align-items: center;
+  gap: 4px;
 `;
 
 interface ILegendColor {
@@ -43,7 +65,8 @@ interface ILegendColor {
 }
 
 export const LegendColor = styled.div<ILegendColor>`
-  width: 18px;
-  height: 18px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
   background: ${({ index }) => sliceColors[index] || 'red'};
 `;

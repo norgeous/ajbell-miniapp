@@ -1,6 +1,6 @@
 import { ISlice, Slice } from './styled';
 
-const PieSlice = ({ index, value, offsetDeg }:ISlice) => (
+const PieSlice = ({ index, value, offsetDeg }: ISlice) => (
   <Slice
     index={index}
     value={value}

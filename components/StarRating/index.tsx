@@ -5,11 +5,15 @@ interface IStarRating {
   max?: number;
 }
 
-const StarRating = ({ value, max = 5 }:IStarRating) => {
+const StarRating = ({ value, max = 5 }: IStarRating) => {
   return (
     <div>
-      {Array.from({ length: value }, (_, i) => <FaStar key={i} />)}
-      {Array.from({ length: max - value }, (_, i) => <FaRegStar key={i} />)}
+      {Array.from({ length: value }, (_, i) => (
+        <FaStar key={i} />
+      ))}
+      {Array.from({ length: max - value }, (_, i) => (
+        <FaRegStar key={i} />
+      ))}
     </div>
   );
 };
