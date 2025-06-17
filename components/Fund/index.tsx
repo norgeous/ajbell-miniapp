@@ -22,8 +22,14 @@ const Fund = ({ data }: IFund) => {
       <StarRating value={data.data.ratings.analystRating} />
       <GradientRating value={data.data.ratings.SRRI} />
       <div>{data.data.ratings.analystRatingLabel}</div>
-      <div>£{data.data.quote.lastPrice}</div>
-      <div>£{data.data.quote.ongoingCharge}</div>
+      <div>
+        {data.data.quote.currency}
+        {data.data.quote.lastPrice}
+      </div>
+      <div>
+        {data.data.quote.currency}
+        {data.data.quote.ongoingCharge}
+      </div>
       <div>{data.data.quote.sectorName}</div>
       <PieChart values={data.data.portfolio.asset} />
       {data.data.documents.map(({ id, type, url }) => (
