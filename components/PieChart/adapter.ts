@@ -9,9 +9,7 @@ const adaptPieValues = (values:PieValues[]) => {
 
   // calculate offsets and apply normalisationMultiplier
   const newValues = values.map((item, index) => {
-    const total = values.slice(0,index).reduce((acc,{ value }) => acc + value, 0) * normalisationMultiplier;
-
-    console.log({index, total})
+    const total = values.slice(0, index).reduce((acc, { value }) => acc + value, 0) * normalisationMultiplier;
     const normalisedValue = item.value * normalisationMultiplier;
     return {
       ...item,
