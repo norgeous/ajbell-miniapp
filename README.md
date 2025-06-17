@@ -34,6 +34,7 @@ npm install
 - [ ] Mobile responsiveness
 - [ ] Use of local storage to save the user’s fund selection
 - [ ] Front-end performance
+- [ ] a11y (esp. of graphs)
 
 ## Steps to recreate this project
 
