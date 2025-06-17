@@ -1,7 +1,8 @@
+import formatPercent from '@/helpers/formatPercent';
+import DataTable from '@/components/Table';
 import adaptPieValues from './adapter';
 import PieSlice from './PieSlice';
 import { Svg, LegendColor } from './styled';
-import DataTable from '@/components/Table';
 
 export type PieValues = {
   label: string;
@@ -34,7 +35,7 @@ const PieChart = ({ values }: IPieChart) => {
               {label}
             </>
           ),
-          value: `${value.toFixed(2)}%`,
+          value: formatPercent(value),
         }))}
       />
     </>

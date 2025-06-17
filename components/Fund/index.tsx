@@ -1,13 +1,12 @@
 import formatDate from '@/helpers/formatDate';
 import formatCurrency from '@/helpers/formatCurrency';
 import formatPercent from '@/helpers/formatPercent';
-
+import { AJBellResponseType } from '@/helpers/endpoint';
 import GradientRating from '@/components/GradientRating';
 import PieChart from '@/components/PieChart';
 import StarRating from '@/components/StarRating';
 import DataTable from '@/components/Table';
 import ExternalLink from '@/components/ExternalLink';
-import { AJBellResponseType } from '@/helpers/endpoint';
 
 interface IFund {
   data: AJBellResponseType;
@@ -27,7 +26,7 @@ const Fund = ({ data }: IFund) => {
         {formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)} (
         {formatDate(data.data.quote.lastPriceDate)})
       </div>
-      <div>Ongoing Charge: {data.data.quote.ongoingCharge}%</div>
+      <div>Ongoing Charge: {formatPercent(data.data.quote.ongoingCharge)}</div>
       <PieChart values={data.data.portfolio.asset} />
       {data.data.documents.map(({ id, type, url }) => (
         <ExternalLink key={id} href={url}>
