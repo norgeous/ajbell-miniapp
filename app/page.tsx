@@ -41,7 +41,6 @@ const Home = () => {
     investmentStrategies[selectedStrategyIndex]?.fundOptions[selectedFundIndex]
       ?.id;
 
-  console.log({ id });
   const data = id && idToData[id];
 
   return (
@@ -52,9 +51,6 @@ const Home = () => {
         setSelectedStrategyIndex={setSelectedStrategyIndex}
         setSelectedFundIndex={setSelectedFundIndex}
       />
-      ssi:{selectedStrategyIndex}
-      sfi:{selectedFundIndex}
-      {/* id:{id} */}
       {data && <Fund data={data} />}
     </>
   );
