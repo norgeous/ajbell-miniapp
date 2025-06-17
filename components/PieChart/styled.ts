@@ -21,10 +21,9 @@ export const Svg = styled.svg`
   max-width: 500px;
 `;
 
-
 const circumference = (Math.PI * 2) * 25;
 
-interface ISlice {
+export interface ISlice {
   index: number;
   value: number; // size in percent of slice
   offsetDeg: number; // degrees of rotation of this slice
