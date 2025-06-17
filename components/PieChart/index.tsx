@@ -50,12 +50,7 @@ type PieValues = {
   value: number;
 }
 
-interface IPieChart {
-  values: PieValues[];
-}
-
-const PieChart = ({ values = demo }:IPieChart) => {
-
+const adapt = (values:PieValues[]) => {
   const {
     valuesWithOffsets,
   } = values.reduce((acc, item) => {
@@ -75,10 +70,22 @@ const PieChart = ({ values = demo }:IPieChart) => {
     valuesWithOffsets: [],
   });
 
+  return valuesWithOffsets;
+}
+
+interface IPieChart {
+  values: PieValues[];
+}
+
+const PieChart = ({ values = demo }:IPieChart) => {
+  const valuesWithOffsets = adapt(values);
+
   return (
     <svg width="100" height="100">
       <circle r="50" cx="50" cy="50" fill="lightgrey" />
-      {valuesWithOffsets.map(({ label, value, offset }) => <PieSlice key={label} value={value} offset={offset} />)}
+      {valuesWithOffsets.map(({ label, value, offset }) => (
+        <PieSlice key={label} value={value} offset={offset} />
+      ))}
     </svg>
   );
 };
