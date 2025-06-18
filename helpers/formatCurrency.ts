@@ -1,5 +1,6 @@
 const currencySymbols = {
   GBX: '£',
+  GBP: '£',
   YEN: '¥',
 };
 

@@ -2,15 +2,15 @@
 
 import StrategySelector from '@/components/StrategySelector';
 import Fund from '@/components/Fund';
-import { idToMockData, MockIdsType } from '@/mocks/getMockById';
 import useLocalStorage from '@/hooks/useLocalStorage';
 
-const FundPage = () => {
-  const [selectedFundId, setSelectedFundId] = useLocalStorage<MockIdsType>(
+const FundPage = ({ allData }) => {
+  const [selectedFundId, setSelectedFundId] = useLocalStorage<string>(
     'fundId',
     '',
   );
-  const data = selectedFundId && idToMockData[selectedFundId];
+
+  const data = allData[selectedFundId];
 
   return (
     <>
