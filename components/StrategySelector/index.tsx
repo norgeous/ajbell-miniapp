@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import MultiButton from '@/components/MultiButton';
 import { MockIdsType } from '@/mocks/getMockById';
+import useLocalStorage from '@/hooks/useLocalStorage';
 
 const investmentStrategies = [
   {
@@ -24,7 +24,10 @@ interface IStrategySelector {
 }
 
 const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
-  const [selectedStrategy, setSelectedStrategy] = useState('');
+  const [selectedStrategy, setSelectedStrategy] = useLocalStorage(
+    'strategy',
+    '',
+  );
 
   return (
     <>
