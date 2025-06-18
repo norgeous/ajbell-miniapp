@@ -19,7 +19,7 @@ npm install
 
 - [x] NextJS
 - [x] Storybook
-  - [ ] Storybook plugins
+  - [x] Storybook plugins
 - [x] An SPA with
   - [x] analystRating, is displayed as a star rating between 0-5. (StarRating)
   - [x] SRRI, is a sliding measure of risk between 0-10 where zero is low risk, 10 is very high risk. (GradientRating)
@@ -27,7 +27,9 @@ npm install
 - [ ] Use of local storage to save the user’s fund selection
 - [ ] Mobile responsiveness
 - [ ] Error handling
-- [ ] Tests
+- [x] Tests
+  - [x] Storybook Interaction test (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
+  - [ ] vitest
 - [ ] Caching / SSR
 - [ ] a11y (esp. of graphs)
 - [ ] CI
