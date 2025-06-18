@@ -1,9 +1,5 @@
-import { useLocalStorage } from '@uidotdev/usehooks';
+'use client';
 
-// const useLocalStorage = () => {
-//   const value = 0;
-//   const setValue = () => {};
-//   return [value, setValue];
-// };
+import { useLocalStorage } from '@uidotdev/usehooks';
 
 export default useLocalStorage;
