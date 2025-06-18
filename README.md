@@ -25,7 +25,7 @@ npm install
   - [x] SRRI, is a sliding measure of risk between 0-10 where zero is low risk, 10 is very high risk. (GradientRating)
   - [x] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages. (PieChart)
 - [x] Use of local storage to save the user’s fund selection
-- [ ] Caching / SSR
+- [x] Caching / SSR
 - [ ] Error handling
 - [ ] Mobile responsiveness
 - [x] Tests

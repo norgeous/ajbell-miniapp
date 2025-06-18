@@ -1,6 +1,8 @@
 import FundPage from '@/components/FundPage';
 
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+// https://nextjs.org/docs/app/api-reference/functions/fetch#fetchurl-options
+const fetcher = (url: string) =>
+  fetch(url, { cache: 'force-cache' }).then(res => res.json());
 
 const ids = ['BYW8RV9', 'BYW8RX1', 'BYW8VG2', 'BN0S2V9'];
 
