@@ -26,7 +26,7 @@ npm install
   - [x] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages. (PieChart)
 - [x] Use of local storage to save the user’s fund selection
 - [x] Caching / SSR
-- [ ] Error handling
+- [x] Error handling
 - [ ] Mobile responsiveness
 - [x] Tests
   - [x] Storybook Interaction test (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)

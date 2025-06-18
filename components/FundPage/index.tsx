@@ -5,9 +5,10 @@ import Fund from '@/components/Fund';
 import useLocalStorage from '@/hooks/useLocalStorage';
 
 const FundPage = ({ allData }) => {
-  const [selectedFundId, setSelectedFundId] = useLocalStorage<
-    keyof typeof allData | ''
-  >('fundId', '');
+  const [selectedFundId, setSelectedFundId] = useLocalStorage<string>(
+    'fundId',
+    '',
+  );
 
   const data = allData[selectedFundId];
 
