@@ -25,20 +25,20 @@ npm install
   - [x] SRRI, is a sliding measure of risk between 0-10 where zero is low risk, 10 is very high risk. (GradientRating)
   - [x] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages. (PieChart)
 - [x] Use of local storage to save the user’s fund selection
-- [ ] Mobile responsiveness
+- [ ] Caching / SSR
 - [ ] Error handling
+- [ ] Mobile responsiveness
 - [x] Tests
   - [x] Storybook Interaction test (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
   - [ ] vitest
   - [ ] local visual difference testing
-- [ ] Caching / SSR
 - [ ] a11y (esp. of graphs)
 - [ ] CI
 
 ## Considerations
 
 - [x] Aesthetic presentation of the data
-- [ ] Clarity and simplicity of code
-- [ ] Standardisation
-- [ ] Use of relevant frameworks for JS, CSS
-- [ ] Front-end performance
+- [x] Clarity and simplicity of code
+- [x] Standardisation
+- [x] Use of relevant frameworks for JS, CSS
+- [x] Front-end performance
