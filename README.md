@@ -30,6 +30,7 @@ npm install
 - [x] Tests
   - [x] Storybook Interaction test (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
   - [ ] vitest
+  - [ ] local visual difference testing
 - [ ] Caching / SSR
 - [ ] a11y (esp. of graphs)
 - [ ] CI
