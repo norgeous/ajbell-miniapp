@@ -2,6 +2,8 @@
 
 import styled from 'styled-components';
 
+// mostly from https://www.youtube.com/watch?v=dsZ7RN9ItR4
+
 const GlassCard = styled.div`
   display: grid;
   gap: 1lh;
