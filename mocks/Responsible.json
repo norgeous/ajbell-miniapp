@@ -1,0 +1,105 @@
+{
+  "data": {
+    "quote": {
+      "__typename": "Fund",
+      "name": "VT AJ Bell Responsible Gr I GBP Acc",
+      "marketCode": "FUND:BN0S2V9",
+      "lastPrice": 1.20138,
+      "lastPriceDate": "2024-06-04",
+      "ongoingCharge": 0.45,
+      "sectorName": "Flexible Investment",
+      "currency": "GBP"
+    },
+    "profile": {
+      "objective": "The investment objective of the fund is to achieve capital growth over the long-term (5 years) through investment in assets with a responsible strategy that follow a responsible strategy. Capital is in fact at risk and there is no guarantee that capital growth will be achieved over a 5 year, or any, period The Sub-fund will seek to achieve its objective by investing at least 80%, in index-tracking investments and which consist of collective investment schemes (including those managed or operated by the ACD)."
+    },
+    "ratings": {
+      "analystRating": 4,
+      "SRRI": 5,
+      "analystRatingLabel": "Neutral"
+    },
+    "documents": [
+      {
+        "id": "511596605",
+        "type": "Factsheet",
+        "url": "https://doc.morningstar.com/Document/9371c70d94169b15529103dbf8f03bba.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
+      },
+      {
+        "id": "504509232",
+        "type": "KIID",
+        "url": "https://doc.morningstar.com/Document/b452f65a0880e1d55585069b7d5e2201.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
+      },
+      {
+        "id": "487508363",
+        "type": "Prospectus",
+        "url": "https://doc.morningstar.com/Document/bacf7c54fc423e00c9ae7105dccaa81f.msdoc?key=e33ffc7c69edde8ebee9cc33e90c47cccaca9c6eb3a0f372"
+      }
+    ],
+    "portfolio": {
+      "asset": [
+        {
+          "label": "Stock",
+          "value": 85.27585
+        },
+        {
+          "label": "Bond",
+          "value": 10.89832
+        },
+        {
+          "label": "Cash",
+          "value": 4.2768
+        },
+        {
+          "label": "Other",
+          "value": 1.48467
+        },
+        {
+          "label": "Property",
+          "value": 0
+        }
+      ],
+      "top10Holdings": [
+        {
+          "name": "Xtrackers MSCI USA ESG ETF 1C",
+          "weighting": 17.88353
+        },
+        {
+          "name": "Xtrackers MSCI EM ESG ETF 1C",
+          "weighting": 17.56036
+        },
+        {
+          "name": "Amundi MSCI UK IMI SRI PAB ETF DR GBP",
+          "weighting": 13.02086
+        },
+        {
+          "name": "UBS ETF MSCI UK IMI SRI GBP A dis",
+          "weighting": 12.52205
+        },
+        {
+          "name": "Amundi IS MSCI Europe SRI PAB ETF DRC",
+          "weighting": 7.07327
+        },
+        {
+          "name": "iShares MSCI EM SRI ETF USD Acc",
+          "weighting": 6.7688
+        },
+        {
+          "name": "iShares MSCI Japan SRI ETF",
+          "weighting": 6.0945
+        },
+        {
+          "name": "iShares $ HY Corp Bd ESG ETF GBP H Dist",
+          "weighting": 4.52461
+        },
+        {
+          "name": "L&G ESG Emerging Markets Corp Bd USD ETF",
+          "weighting": 3.05155
+        },
+        {
+          "name": "Invesco Global HYCorpBdESGETFGBPPfHdgInc",
+          "weighting": 2.53114
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,7 @@ import PieChart from '.';
 import cautiousMockData from '@/mocks/Cautious.json';
 import balancedMockData from '@/mocks/Balanced.json';
 import adventurousMockData from '@/mocks/Adventurous.json';
+import responsibleMockData from '@/mocks/Responsible.json';
 
 const meta = {
   title: 'Components/PieChart',
@@ -31,6 +32,13 @@ export const Balanced: Story = {
 export const Adventurous: Story = {
   args: {
     values: adventurousMockData.data.portfolio.asset,
+  },
+};
+
+// from https://cdn.core3-dev.ajbbuild.uk/interview/BN0S2V9.json
+export const Responsible: Story = {
+  args: {
+    values: responsibleMockData.data.portfolio.asset,
   },
 };
 
