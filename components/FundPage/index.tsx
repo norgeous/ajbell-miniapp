@@ -5,7 +5,7 @@ import Fund from '@/components/Fund';
 import { idToMockData, MockIdsType } from '@/mocks/getMockById';
 import useLocalStorage from '@/hooks/useLocalStorage';
 
-const FundPage = () => {
+const FundPage = ({ allData }) => {
   const [selectedFundId, setSelectedFundId] = useLocalStorage<MockIdsType>(
     'fundId',
     '',
@@ -16,6 +16,7 @@ const FundPage = () => {
     <>
       <StrategySelector onSelectFund={setSelectedFundId} />
       {data && <Fund data={data} />}
+      <pre>{JSON.stringify(allData, null, 2)}</pre>
     </>
   );
 };
