@@ -1,10 +1,4 @@
-'use client';
-
-import styled from 'styled-components';
-
-const Button = styled.button`
-  padding: 1em;
-`;
+import Button from '@/components/Button';
 
 interface IStrategySelector {
   investmentStrategies: {
