@@ -1,19 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import { fn } from 'storybook/test';
-import Button from '.';
+import GlassCard from '.';
 
 const meta = {
-  title: 'Components/Button',
-  component: Button,
+  title: 'Components/GlassCard',
+  component: GlassCard,
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof GlassCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    children: 'hello',
-    onClick: fn(),
+    children: 'hello i am a card',
   },
 };
