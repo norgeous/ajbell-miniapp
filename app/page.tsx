@@ -7,23 +7,25 @@ import cautiousMockData from '@/mocks/Cautious.json';
 import balancedMockData from '@/mocks/Balanced.json';
 import adventurousMockData from '@/mocks/Adventurous.json';
 import responsibleMockData from '@/mocks/Responsible.json';
+import { AJBellResponseType } from '@/helpers/endpoint';
 
-const idToData = {
+const idToMockData = {
   BYW8RV9: cautiousMockData,
   BYW8RX1: balancedMockData,
   BYW8VG2: adventurousMockData,
   BN0S2V9: responsibleMockData,
 };
 
-const Home = () => {
-  const [selectedFundId, setSelectedFundId] = useState('');
+type MockIdsType = keyof typeof idToMockData | '';
 
-  const data = selectedFundId && idToData[selectedFundId];
+const Home = () => {
+  const [selectedFundId, setSelectedFundId] = useState<MockIdsType>('');
+  const data = selectedFundId && idToMockData[selectedFundId];
 
   return (
     <>
       <StrategySelector onSelectFund={setSelectedFundId} />
-      {data && <Fund data={data} />}
+      {data && <Fund data={data as AJBellResponseType} />}
     </>
   );
 };
