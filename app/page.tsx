@@ -7,6 +7,7 @@ import cautiousMockData from '@/mocks/Cautious.json';
 import balancedMockData from '@/mocks/Balanced.json';
 import adventurousMockData from '@/mocks/Adventurous.json';
 import responsibleMockData from '@/mocks/Responsible.json';
+import MultiButton from '@/components/MultiButton';
 
 const idToData = {
   BYW8RV9: cautiousMockData,
@@ -31,28 +32,40 @@ const investmentStrategies = [
 ];
 
 const Home = () => {
-  const [selectedStrategyIndex, setSelectedStrategyIndex] = useState<
-    number | undefined
-  >(undefined);
+  const [selectedStrategy, setSelectedStrategy] = useState('');
+  const [selectedFund, setSelectedFund] = useState('');
 
-  const [selectedFundIndex, setSelectedFundIndex] = useState<
-    number | undefined
-  >(undefined);
+  // const id =
+  //   investmentStrategies[selectedStrategy]?.fundOptions[selectedFund]
+  //     ?.id;
 
-  const id =
-    investmentStrategies[selectedStrategyIndex]?.fundOptions[selectedFundIndex]
-      ?.id;
+  // const data = id && idToData[id];
+
+  const id = investmentStrategies
+    .find(({ name }) => name === selectedStrategy)
+    ?.fundOptions.find(({ fundName }) => fundName === selectedFund)?.id;
 
   const data = id && idToData[id];
 
   return (
     <>
-      <StrategySelector
-        investmentStrategies={investmentStrategies}
-        selectedStrategyIndex={selectedStrategyIndex}
-        setSelectedStrategyIndex={setSelectedStrategyIndex}
-        setSelectedFundIndex={setSelectedFundIndex}
+      <MultiButton
+        labels={investmentStrategies.map(({ name }) => name)}
+        onClick={label => {
+          setSelectedStrategy(label);
+          setSelectedFund(''); // reset Fund selection to nothing
+        }}
       />
+      {selectedStrategy && (
+        <MultiButton
+          labels={
+            investmentStrategies
+              .find(({ name }) => name === selectedStrategy)
+              ?.fundOptions.map(({ fundName }) => fundName) || []
+          }
+          onClick={setSelectedFund}
+        />
+      )}
       {data && <Fund data={data} />}
     </>
   );
