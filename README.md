@@ -37,8 +37,8 @@ npm install
 
 ## Considerations
 
-- [x] Aesthetic presentation of the data
-- [x] Clarity and simplicity of code
-- [x] Standardisation
-- [x] Use of relevant frameworks for JS, CSS
-- [x] Front-end performance
+- Aesthetic presentation of the data
+- Clarity and simplicity of code
+- Standardisation
+- Use of relevant frameworks for JS, CSS
+- Front-end performance
