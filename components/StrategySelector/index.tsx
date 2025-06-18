@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import MultiButton from '@/components/MultiButton';
+import { MockIdsType } from '@/mocks/getMockById';
 
 const investmentStrategies = [
   {
@@ -18,7 +19,11 @@ const investmentStrategies = [
   },
 ];
 
-const StrategySelector = ({ onSelectFund }) => {
+interface IStrategySelector {
+  onSelectFund: (id: MockIdsType) => void;
+}
+
+const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
   const [selectedStrategy, setSelectedStrategy] = useState('');
 
   return (
@@ -38,11 +43,13 @@ const StrategySelector = ({ onSelectFund }) => {
               ?.fundOptions.map(({ fundName }) => fundName) || []
           }
           onClick={label => {
-            const id = investmentStrategies
-              .find(({ name }) => name === selectedStrategy)
-              ?.fundOptions.find(({ fundName }) => fundName === label)?.id;
+            const id =
+              investmentStrategies
+                .find(({ name }) => name === selectedStrategy)
+                ?.fundOptions.find(({ fundName }) => fundName === label)?.id ||
+              '';
 
-            onSelectFund(id);
+            onSelectFund(id as MockIdsType);
           }}
         />
       )}
