@@ -45,9 +45,9 @@ npm install
 
 ## Future / Ideas / Didn't have time to do
 
-- CI
 - Local visual difference testing report with RegVis
 - Capture both mobile and desktop views of stories with Storycap
+- CI which runs linter, vitest tests, storybook tests, visual difference tests, checks project will compile, deploys Storybook, etc
 - Use NPM workspaces to separate custom node modules; ie Storybook module, etc
 - Use GTM to see where people abandon the flow
 - Custom Storybook plugin(s) for whatever requirements
