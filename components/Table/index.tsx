@@ -11,7 +11,7 @@ const DataTable = ({ headings, data }: IDataTable) => (
   <Table>
     <Tbody>
       {headings && (
-        <Tr isHeadingsRow>
+        <Tr $isHeadingsRow>
           {headings.map(heading => (
             <Th key={heading}>{heading}</Th>
           ))}
