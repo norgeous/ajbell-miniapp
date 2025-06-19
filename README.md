@@ -52,3 +52,4 @@ npm install
 - Use GTM to see where people abandon the flow
 - Custom Storybook plugin(s) for whatever requirements
 - Use Mock Service Worker (MSW) to mock fetch - this might not work actually, im not sure if we can render server components inside storybook
+- web bff pattern. move all data adapters into one place
