@@ -11,14 +11,18 @@ const fetcher = (url: string) =>
       console.warn('caught the error', err);
     });
 
-const ids = ['BYW8RV9', 'BYW8RX1', 'BYW8VG2', 'BN0S2V9'];
+const ids = [
+  'BYW8RV9', // Cautious
+  'BYW8RX1', // Balanced
+  'BYW8VG2', // Adventurous
+  'BN0S2V9', // Responsible
+];
 
-const fetchAll = Promise.allSettled([
-  fetcher('https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RV9.json'), // Cautious
-  fetcher('https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RX1.json'), // Balanced
-  fetcher('https://cdn.core3-dev.ajbbuild.uk/interview/BYW8VG2.json'), // Adventurous
-  fetcher('https://cdn.core3-dev.ajbbuild.uk/interview/BN0S2V9.json'), // Responsible
-]).then(responses =>
+const fetchAll = Promise.allSettled(
+  ids.map(id =>
+    fetcher(`https://cdn.core3-dev.ajbbuild.uk/interview/${id}.json`)
+  )
+).then(responses =>
   responses.reduce(
     (acc, response, index) => ({
       ...acc,
