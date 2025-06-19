@@ -12,7 +12,9 @@ const adaptPieValues = (values: PieValues[]) => {
     const total =
       values.slice(0, index).reduce((acc, { value }) => acc + value, 0) *
       normalisationMultiplier;
+
     const normalisedValue = item.value * normalisationMultiplier;
+
     return {
       ...item,
       normalisedValue,
