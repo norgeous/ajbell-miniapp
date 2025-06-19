@@ -33,7 +33,6 @@ npm install
   - [x] Storybook Interaction test (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
   - [ ] vitest
   - [ ] local visual difference testing
-- [ ] CI
 
 ## Considerations
 
@@ -42,3 +41,8 @@ npm install
 - Standardisation
 - Use of relevant frameworks for JS, CSS
 - Front-end performance
+
+## Future
+
+- use GTM to see where people abandon the flow
+- CI
