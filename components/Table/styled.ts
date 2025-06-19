@@ -18,7 +18,7 @@ export const Tbody = styled.tbody`
   `)}
 `;
 
-export const Tr = styled.tr<{ isHeadingsRow?: boolean; headings?: string[] }>`
+export const Tr = styled.tr<{ $isHeadingsRow?: boolean; headings?: string[] }>`
   display: flex;
   flex-direction: column;
 
@@ -42,8 +42,8 @@ export const Tr = styled.tr<{ isHeadingsRow?: boolean; headings?: string[] }>`
     }
   }
 
-  ${({ isHeadingsRow }) =>
-    isHeadingsRow &&
+  ${({ $isHeadingsRow }) =>
+    $isHeadingsRow &&
     css`
       display: none;
     `}
