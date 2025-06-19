@@ -31,6 +31,7 @@ const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
 
   return (
     <>
+      <p>1. Tell us why you’re investing</p>
       <MultiButton
         labels={investmentStrategies.map(({ name }) => name)}
         onClick={label => {
@@ -39,22 +40,25 @@ const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
         }}
       />
       {selectedStrategy && (
-        <MultiButton
-          labels={
-            investmentStrategies
-              .find(({ name }) => name === selectedStrategy)
-              ?.fundOptions.map(({ fundName }) => fundName) || []
-          }
-          onClick={label => {
-            const id =
+        <>
+          <p>2. Choose your fund</p>
+          <MultiButton
+            labels={
               investmentStrategies
                 .find(({ name }) => name === selectedStrategy)
-                ?.fundOptions.find(({ fundName }) => fundName === label)?.id ||
-              '';
+                ?.fundOptions.map(({ fundName }) => fundName) || []
+            }
+            onClick={label => {
+              const id =
+                investmentStrategies
+                  .find(({ name }) => name === selectedStrategy)
+                  ?.fundOptions.find(({ fundName }) => fundName === label)
+                  ?.id || '';
 
-            onSelectFund(id as MockIdsType);
-          }}
-        />
+              onSelectFund(id as MockIdsType);
+            }}
+          />
+        </>
       )}
     </>
   );
