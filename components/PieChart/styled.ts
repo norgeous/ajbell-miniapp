@@ -48,6 +48,12 @@ interface ILegendColor {
   index: number;
 }
 
+export const Legend = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+`;
+
 export const LegendColor = styled.div<ILegendColor>`
   display: inline-block;
   width: 20px;

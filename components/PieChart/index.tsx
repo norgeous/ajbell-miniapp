@@ -2,7 +2,7 @@ import formatPercent from '@/helpers/formatPercent';
 import DataTable from '@/components/Table';
 import adaptPieValues from './adapter';
 import PieSlice from './PieSlice';
-import { Wrapper, Svg, LegendColor } from './styled';
+import { Wrapper, Svg, Legend, LegendColor } from './styled';
 
 export type PieValues = {
   label: string;
@@ -30,10 +30,10 @@ const PieChart = ({ values }: IPieChart) => {
       <DataTable
         data={values.map(({ label, value }, index) => ({
           label: (
-            <div>
+            <Legend>
               <LegendColor index={index} />
               {label}
-            </div>
+            </Legend>
           ),
           value: formatPercent(value),
         }))}
