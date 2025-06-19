@@ -8,7 +8,7 @@ interface IStarRating {
 const StarRating = ({ value, max = 5 }: IStarRating) => {
   // todo: normalise value and max, it has some strange behaviour currently
   return (
-    <div>
+    <div title={`${value} out of ${max} stars`}>
       {Array.from({ length: value }, (_, i) => (
         <FaStar key={i} />
       ))}
