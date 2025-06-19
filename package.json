@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "prelint": "prettier --log-level silent --write \"**/*.{js,mdx,md,json}\"",
+    "prelint": "prettier --log-level silent --write \"**/*.{ts,tsx,mdx,md,json}\"",
     "lint": "next lint --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
