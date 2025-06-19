@@ -7,8 +7,9 @@ import PieChart from '@/components/PieChart';
 import StarRating from '@/components/StarRating';
 import DataTable from '@/components/Table';
 import ExternalLink from '@/components/ExternalLink';
-import GlassCard from '../GlassCard';
-import ResponsiveColumn from '../ResponsiveColumn';
+import GlassCard from '@/components/GlassCard';
+import ResponsiveColumn from '@/components/ResponsiveColumn';
+import Button from '@/components/Button';
 
 interface IFund {
   data: AJBellResponseType;
@@ -68,6 +69,8 @@ const Fund = ({ data }: IFund) => {
             }),
           )}
         />
+
+        <Button>CTA</Button>
       </GlassCard>
     </>
   );
