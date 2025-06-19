@@ -8,6 +8,7 @@
     "start": "next start",
     "prelint": "prettier --log-level silent --write \"**/*.{ts,tsx,mdx,md,json}\"",
     "lint": "next lint --fix",
+    "postlint": "tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "storycap": "storycap http://localhost:6006"
