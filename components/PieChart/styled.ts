@@ -1,16 +1,11 @@
 'use client';
 
-import { desktopUp } from '@/helpers/breakpoint';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1em;
-  ${desktopUp(css`
-    flex-direction: row;
-  `)}
 `;
 
 const sliceColors = [

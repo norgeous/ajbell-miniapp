@@ -1,4 +1,5 @@
 import Button from '@/components/Button';
+import ResponsiveColumn from '@/components/ResponsiveColumn';
 
 interface IMultiButton {
   labels: string[];
@@ -7,13 +8,13 @@ interface IMultiButton {
 
 const MultiButton = ({ labels, onClick }: IMultiButton) => {
   return (
-    <div>
+    <ResponsiveColumn>
       {labels.map(label => (
         <Button key={label} onClick={() => onClick(label)}>
           {label}
         </Button>
       ))}
-    </div>
+    </ResponsiveColumn>
   );
 };
 

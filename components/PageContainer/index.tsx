@@ -1,12 +1,8 @@
-import { desktopUp } from '@/helpers/breakpoint';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const PageContainer = styled.main`
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
-  ${desktopUp(css`
-    background: pink;
-  `)}
 `;
 
 export default PageContainer;
