@@ -24,4 +24,8 @@ export const Primary: Story = {
       BN0S2V9: responsibleMockData as AJBellResponseType,
     },
   },
+  play: async ({ canvas, userEvent }) => {
+    await userEvent.click(canvas.getByText('Growth Funds Variations'));
+    await userEvent.click(canvas.getByText('Cautious'));
+  },
 };
