@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 export const Wrap = styled.div`
   display: flex;
   gap: 2px;
+  margin-bottom: 1em;
 `;
 
 interface IPiece {

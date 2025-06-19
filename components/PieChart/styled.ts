@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 1em;
+  margin-bottom: 1em;
 `;
 
 const sliceColors = [

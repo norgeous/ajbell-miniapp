@@ -25,14 +25,15 @@ const Fund = ({ data }: IFund) => {
 
         <ResponsiveColumn>
           <div>
+            {data.data.ratings.SRRI && (
+              <GradientRating value={data.data.ratings.SRRI} />
+            )}
+
             <p>{data.data.profile.objective}</p>
           </div>
           <div>
             <PieChart values={data.data.portfolio.asset} />
 
-            {data.data.ratings.SRRI && (
-              <GradientRating value={data.data.ratings.SRRI} />
-            )}
             <StarRating value={data.data.ratings.analystRating} />
 
             <div>{data.data.ratings.analystRatingLabel}</div>
