@@ -7,7 +7,7 @@ const adaptPieValues = (values: PieValues[]) => {
   const total = values.reduce((acc, { value }) => acc + value, 0);
   const normalisationMultiplier = 100 / total;
 
-  // calculate offsets and apply normalisationMultiplier
+  // calculate each slices rotational offset and apply normalisationMultiplier
   const newValues = values.map((item, index) => {
     const total =
       values.slice(0, index).reduce((acc, { value }) => acc + value, 0) *
