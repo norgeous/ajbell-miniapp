@@ -44,10 +44,10 @@ npm install
 - Use of relevant frameworks for JS, CSS
 - Front-end performance
 
-## Future / Ideas
+## Future / Ideas / Didn't have time to do
 
-- Use GTM to see where people abandon the flow
 - CI
 - Local visual difference testing report with RegVis
 - Capture both mobile and desktop views of stories with Storycap
 - Use NPM workspaces to separate custom node modules; ie Storybook module, etc
+- Use GTM to see where people abandon the flow
