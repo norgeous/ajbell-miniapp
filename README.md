@@ -10,11 +10,12 @@ npm install
 
 ## How to use
 
-| Command             | What it does                                           |
-| ------------------- | ------------------------------------------------------ |
-| `npm run dev`       | Runs Nextjs in development mode                        |
-| `npm run storybook` | Runs Storybook in development mode                     |
-| `npm run storycap`  | Runs Storycap and captures images of Storybook stories |
+| Command             | What it does                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| `npm run dev`       | Runs Nextjs in development mode                                                       |
+| `npm run storybook` | Runs Storybook in development mode                                                    |
+| `npm run storycap`  | Runs Storycap and captures images of Storybook stories to `__screenshots__` directory |
+| `npm run lint`      | Runs Prettier and ESLint in fix mode                                                  |
 
 ## Features
 
@@ -33,7 +34,7 @@ npm install
 - [x] Tests
   - [x] Storybook Interaction test (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
   - [ ] vitest
-  - [ ] local visual difference testing
+- [x] Lint + Format on Save
 
 ## Considerations
 
@@ -47,4 +48,6 @@ npm install
 
 - Use GTM to see where people abandon the flow
 - CI
+- Local visual difference testing report with RegVis
 - Capture both mobile and desktop views of stories with Storycap
+- Use NPM workspaces to separate custom node modules; ie Storybook module, etc
