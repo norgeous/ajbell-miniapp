@@ -22,7 +22,6 @@ export const Tbody = styled.tbody`
 export const Tr = styled.tr<{ $isHeadingsRow?: boolean; headings?: string[] }>`
   display: flex;
   flex-direction: column;
-  word-break: break-word;
 
   & > td:first-child {
     &:before {
@@ -82,4 +81,5 @@ export const Th = styled.th`
 
 export const Td = styled.td`
   padding: 0.25em;
+  word-break: break-word;
 `;
