@@ -7,7 +7,7 @@ import adventurousMockData from '@/mocks/Adventurous.json';
 import responsibleMockData from '@/mocks/Responsible.json';
 
 const meta = {
-  title: 'Pages/Fund',
+  title: 'Components/Fund',
   component: Fund,
   tags: ['autodocs'],
 } satisfies Meta<typeof Fund>;
