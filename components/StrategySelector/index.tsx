@@ -3,6 +3,7 @@
 import MultiButton from '@/components/MultiButton';
 import { MockIdsType } from '@/mocks/getMockById';
 import useLocalStorage from '@/hooks/useLocalStorage';
+import { Wrap } from './styled';
 
 const investmentStrategies = [
   {
@@ -30,7 +31,7 @@ const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
   );
 
   return (
-    <>
+    <Wrap>
       <p>1. Tell us why you’re investing</p>
       <MultiButton
         labels={investmentStrategies.map(({ name }) => name)}
@@ -60,7 +61,7 @@ const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
           />
         </>
       )}
-    </>
+    </Wrap>
   );
 };
 
