@@ -11,14 +11,14 @@ const DataTable = ({ headings, data }: IDataTable) => (
   <Table>
     <Tbody>
       {headings && (
-        <Tr>
+        <Tr isHeadingsRow>
           {headings.map(heading => (
             <Th key={heading}>{heading}</Th>
           ))}
         </Tr>
       )}
       {adapt(data).map((row, indexRow) => (
-        <Tr key={indexRow}>
+        <Tr key={indexRow} headings={headings}>
           {row.map((cell, indexCell) => (
             <Td key={indexCell}>{cell}</Td>
           ))}

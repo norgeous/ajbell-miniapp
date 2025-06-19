@@ -49,19 +49,21 @@ const Fund = ({ data }: IFund) => {
         </ResponsiveColumn>
 
         <DataTable
+          headings={[
+            `Last Price (${formatDate(data.data.quote.lastPriceDate)})`,
+            'Ongoing Charge',
+          ]}
           data={[
             {
-              title: `Last Price (${formatDate(data.data.quote.lastPriceDate)})`,
-              value: `${formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)}`,
-            },
-            {
-              title: `Ongoing Charge`,
-              value: formatPercent(data.data.quote.ongoingCharge),
+              price: `${formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)}`,
+              charge: formatPercent(data.data.quote.ongoingCharge),
             },
           ]}
         />
+
+        <h3>Top 10 Holdings</h3>
         <DataTable
-          // headings={['Holding', 'Weight']}
+          headings={['Holding', 'Weight']}
           data={data.data.portfolio.top10Holdings.map(
             ({ name, weighting }) => ({
               name,
