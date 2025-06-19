@@ -4,11 +4,13 @@ import styled from 'styled-components';
 
 export const Table = styled.table`
   width: 100%;
-  /* max-width: 250px; */
+  min-width: 100px;
+`;
+
+export const Tbody = styled.tbody`
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  min-width: 100px;
+  gap: 0.5em;
 `;
 
 export const Tr = styled.tr`

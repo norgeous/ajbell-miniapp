@@ -1,4 +1,4 @@
-import { Table, Tr, Td } from './styled';
+import { Table, Tbody, Tr, Td } from './styled';
 
 interface IDataTable {
   headings?: string[];
@@ -9,7 +9,7 @@ const adapt = (data: object[]) => data.map(item => Object.values(item));
 
 const DataTable = ({ headings, data }: IDataTable) => (
   <Table>
-    <tbody>
+    <Tbody>
       <Tr>{headings?.map(heading => <th key={heading}>{heading}</th>)}</Tr>
       {adapt(data).map((row, indexRow) => (
         <Tr key={indexRow}>
@@ -18,7 +18,7 @@ const DataTable = ({ headings, data }: IDataTable) => (
           ))}
         </Tr>
       ))}
-    </tbody>
+    </Tbody>
   </Table>
 );
 
