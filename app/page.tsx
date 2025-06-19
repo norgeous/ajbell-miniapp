@@ -20,8 +20,8 @@ const ids = [
 
 const fetchAll = Promise.allSettled(
   ids.map(id =>
-    fetcher(`https://cdn.core3-dev.ajbbuild.uk/interview/${id}.json`)
-  )
+    fetcher(`https://cdn.core3-dev.ajbbuild.uk/interview/${id}.json`),
+  ),
 ).then(responses =>
   responses.reduce(
     (acc, response, index) => ({
@@ -29,8 +29,8 @@ const fetchAll = Promise.allSettled(
       [ids[index]]:
         response.status === 'fulfilled' ? response.value : undefined,
     }),
-    {}
-  )
+    {},
+  ),
 );
 
 const Home = async () => {

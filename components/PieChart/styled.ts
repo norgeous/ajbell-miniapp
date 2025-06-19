@@ -43,7 +43,9 @@ export const Slice = styled.circle<ISlice>`
   transform-origin: 50% 50%;
   stroke-dasharray: ${({ value }) =>
     `${(value * circumference) / 100} ${circumference}`};
-  transition: transform 1s, stroke-dasharray 1s;
+  transition:
+    transform 1s,
+    stroke-dasharray 1s;
 `;
 
 interface ILegendColor {
