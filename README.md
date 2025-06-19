@@ -15,7 +15,7 @@ npm install
 | `npm run dev`       | Runs Nextjs in development mode                                                       |
 | `npm run storybook` | Runs Storybook in development mode                                                    |
 | `npm run storycap`  | Runs Storycap and captures images of Storybook stories to `__screenshots__` directory |
-| `npm run lint`      | Runs Prettier and ESLint in fix mode                                                  |
+| `npm run lint`      | Runs Prettier, ESLint in fix mode, then typescript compiler                           |
 
 ## Features
 
