@@ -47,3 +47,4 @@ npm install
 
 - Use GTM to see where people abandon the flow
 - CI
+- Capture both mobile and desktop views of stories with Storycap
