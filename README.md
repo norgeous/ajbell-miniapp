@@ -10,10 +10,11 @@ npm install
 
 ## How to use
 
-| Command             | What it does                       |
-| ------------------- | ---------------------------------- |
-| `npm run dev`       | Runs Nextjs in development mode    |
-| `npm run storybook` | Runs Storybook in development mode |
+| Command             | What it does                                           |
+| ------------------- | ------------------------------------------------------ |
+| `npm run dev`       | Runs Nextjs in development mode                        |
+| `npm run storybook` | Runs Storybook in development mode                     |
+| `npm run storycap`  | Runs Storycap and captures images of Storybook stories |
 
 ## Features
 
