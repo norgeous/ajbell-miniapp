@@ -7,7 +7,7 @@ interface IStarRating {
 }
 
 const StarRating = ({ value, max = 5 }: IStarRating) => {
-  // todo: normalise value and max, it has some strange behaviour currently
+  // TODO: normalise value and max, it has some strange behaviour currently when the values are outside of the expected range
   return (
     <Wrapper title={`${value} out of ${max} stars`}>
       {Array.from({ length: value }, (_, i) => (
