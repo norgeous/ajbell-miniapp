@@ -36,8 +36,6 @@ const Fund = ({ data }: IFund) => {
 
             <StarRating value={data.data.ratings.analystRating} />
 
-            <div>{data.data.ratings.analystRatingLabel}</div>
-
             <div>
               <h3>Documents</h3>
               {data.data.documents.map(({ id, type, url }) => (
@@ -50,14 +48,19 @@ const Fund = ({ data }: IFund) => {
         </ResponsiveColumn>
 
         <DataTable
-          headings={[
-            `Last Price (${formatDate(data.data.quote.lastPriceDate)})`,
-            'Ongoing Charge',
-          ]}
+          headings={[]}
           data={[
             {
-              price: `${formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)}`,
-              charge: formatPercent(data.data.quote.ongoingCharge),
+              title: `Last Price (${formatDate(data.data.quote.lastPriceDate)})`,
+              value: `${formatCurrency(data.data.quote.lastPrice, data.data.quote.currency)}`,
+            },
+            {
+              title: 'Analyst Rating',
+              value: data.data.ratings.analystRatingLabel,
+            },
+            {
+              title: 'Ongoing Charge',
+              value: formatPercent(data.data.quote.ongoingCharge),
             },
           ]}
         />
