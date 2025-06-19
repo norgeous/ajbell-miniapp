@@ -4,8 +4,15 @@ import PageContainer from '../PageContainer';
 import StrategySelector from '@/components/StrategySelector';
 import Fund from '@/components/Fund';
 import useLocalStorage from '@/hooks/useLocalStorage';
+import { AJBellResponseType } from '@/helpers/endpoint';
 
-const FundPage = ({ allData }) => {
+interface IFundPage {
+  allData: {
+    [fundId: string]: AJBellResponseType;
+  };
+}
+
+const FundPage = ({ allData }: IFundPage) => {
   const [selectedFundId, setSelectedFundId] = useLocalStorage<string>(
     'fundId',
     '',
@@ -16,6 +23,7 @@ const FundPage = ({ allData }) => {
   return (
     <PageContainer>
       <StrategySelector onSelectFund={setSelectedFundId} />
+      {selectedFundId && !data && 'No Data =['}
       {data && <Fund data={data} />}
     </PageContainer>
   );
