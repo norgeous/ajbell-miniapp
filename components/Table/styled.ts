@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 export const Table = styled.table`
   width: 100%;
   min-width: 100px;
+  margin: -0.25em;
 `;
 
 export const Tbody = styled.tbody`
