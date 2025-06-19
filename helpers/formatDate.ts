@@ -1,5 +1,4 @@
-// todo use intl formatter
-
-const formatDate = (date: string) => date;
+const formatDate = (date: string) =>
+  new Intl.DateTimeFormat('en-GB').format(new Date(date));
 
 export default formatDate;
