@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { A } from './styled';
 
 interface IExternalLink {
   href: string;
@@ -7,10 +8,9 @@ interface IExternalLink {
 }
 
 const ExternalLink = ({ href, children }: IExternalLink) => (
-  // todo remove inline styles
-  <a href={href} target="_blank" style={{ display: 'block' }}>
+  <A href={href} target="_blank">
     {children} <FaExternalLinkAlt />
-  </a>
+  </A>
 );
 
 export default ExternalLink;
