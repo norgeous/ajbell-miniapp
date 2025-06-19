@@ -1,14 +1,13 @@
-const currencySymbols = {
-  GBX: '£',
-  GBP: '£',
-  YEN: '¥',
+const currencyNormalise = {
+  GBX: 'GBP',
 };
 
-export type CurrencyType = keyof typeof currencySymbols;
-
-// todo use intl formatter
-
-const formatCurrency = (amount: number, currencyId: CurrencyType = 'GBX') =>
-  `${currencySymbols[currencyId]}${amount.toFixed(2)}`;
+const formatCurrency = (amount: number, currencyId: string = 'GBP') =>
+  new Intl.NumberFormat(navigator.language, {
+    style: 'currency',
+    currency:
+      currencyNormalise[currencyId as keyof typeof currencyNormalise] ||
+      currencyId,
+  }).format(amount);
 
 export default formatCurrency;
