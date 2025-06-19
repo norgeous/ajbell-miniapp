@@ -20,12 +20,11 @@ npm install
 ## Features
 
 - [x] NextJS
-- [x] Storybook
-  - [x] Storybook plugins
+- [x] Storybook with some plugins
 - [x] An SPA with
-  - [x] analystRating, is displayed as a star rating between 0-5. (StarRating)
-  - [x] SRRI, is a sliding measure of risk between 0-10 where zero is low risk, 10 is very high risk. (GradientRating)
-  - [x] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages. (PieChart)
+  - [x] analystRating, is displayed as a star rating between 0-5. (`StarRating` component)
+  - [x] SRRI, is a sliding measure of risk between 0-10 where zero is low risk, 10 is very high risk. (`GradientRating` component)
+  - [x] Portfolio.asset is traditionally displayed as a pie chart, where the values are percentages. (`PieChart` component)
 - [x] Use of local storage to save the user’s fund selection
 - [x] Caching / SSR
 - [x] Error handling
@@ -51,3 +50,5 @@ npm install
 - Capture both mobile and desktop views of stories with Storycap
 - Use NPM workspaces to separate custom node modules; ie Storybook module, etc
 - Use GTM to see where people abandon the flow
+- Custom Storybook plugin(s) for whatever requirements
+- Use Mock Service Worker (MSW) to mock fetch - this might not work actually, im not sure if we can render server components inside storybook
