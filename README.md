@@ -45,5 +45,5 @@ npm install
 
 ## Future / Ideas
 
-- use GTM to see where people abandon the flow
+- Use GTM to see where people abandon the flow
 - CI
