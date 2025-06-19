@@ -76,7 +76,7 @@ const Fund = ({ data }: IFund) => {
           )}
         />
 
-        <Button>CTA</Button>
+        <Button>Invest Today!</Button>
       </GlassCard>
     </>
   );
