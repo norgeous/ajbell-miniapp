@@ -8,21 +8,32 @@ export const Table = styled.table`
 `;
 
 export const Tbody = styled.tbody`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.5em; */
 `;
 
 export const Tr = styled.tr`
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4px;
+  gap: 4px; */
 `;
 
-// todo text overflow
+export const Th = styled.th`
+  text-align: left;
+`;
+
 export const Td = styled.td`
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  max-width: 0;
+  padding: 2px;
+  &:first-child {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  &:last-child {
+    text-align: right;
+  }
 `;

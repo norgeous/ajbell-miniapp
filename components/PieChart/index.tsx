@@ -30,10 +30,10 @@ const PieChart = ({ values }: IPieChart) => {
       <DataTable
         data={values.map(({ label, value }, index) => ({
           label: (
-            <>
+            <div>
               <LegendColor index={index} />
               {label}
-            </>
+            </div>
           ),
           value: formatPercent(value),
         }))}

@@ -61,7 +61,7 @@ const Fund = ({ data }: IFund) => {
           ]}
         />
         <DataTable
-          headings={['Holding', 'Weight']}
+          // headings={['Holding', 'Weight']}
           data={data.data.portfolio.top10Holdings.map(
             ({ name, weighting }) => ({
               name,
