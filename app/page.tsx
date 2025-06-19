@@ -4,7 +4,7 @@ import FundPage from '@/components/FundPage';
 const fetcher = (url: string) =>
   fetch(url, { cache: 'force-cache' })
     .then(res => {
-      if (res.status !== 200) throw new Error('oof');
+      if (res.status !== 200) throw new Error('oof not 200');
       return res.json();
     })
     .catch(err => {
