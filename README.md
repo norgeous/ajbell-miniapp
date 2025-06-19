@@ -19,7 +19,7 @@ npm install
 
 ## Features
 
-- [x] NextJS
+- [x] React, NextJS and Typescript
 - [x] Storybook with some plugins
 - [x] An SPA with
   - [x] analystRating, is displayed as a star rating between 0-5. (`StarRating` component)
