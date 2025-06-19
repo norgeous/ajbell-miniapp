@@ -42,7 +42,7 @@ npm install
 - Use of relevant frameworks for JS, CSS
 - Front-end performance
 
-## Future
+## Future / Ideas
 
 - use GTM to see where people abandon the flow
 - CI
