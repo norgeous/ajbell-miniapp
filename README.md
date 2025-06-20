@@ -33,6 +33,7 @@ npm install
 - [x] Tests
   - [x] Storybook Interaction tests (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
   - [x] code coverage via storybook
+  - [x] Storycaps
 - [x] Lint + Format on Save (in VSCode)
 
 ## Considerations
