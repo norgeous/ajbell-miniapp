@@ -19,14 +19,14 @@ export const Tbody = styled.tbody`
   `)}
 `;
 
-export const Tr = styled.tr<{ $isHeadingsRow?: boolean; headings?: string[] }>`
+export const Tr = styled.tr<{ $isHeadingsRow?: boolean; $headings?: string[] }>`
   display: flex;
   flex-direction: column;
 
   & > td:first-child {
     &:before {
-      ${({ headings }) => css`
-        content: '${headings?.[0]}';
+      ${({ $headings }) => css`
+        content: '${$headings?.[0]}';
         font-weight: bold;
         display: block;
       `}
@@ -35,8 +35,8 @@ export const Tr = styled.tr<{ $isHeadingsRow?: boolean; headings?: string[] }>`
 
   & > td:last-child {
     &:before {
-      ${({ headings }) => css`
-        content: '${headings?.[1]}';
+      ${({ $headings }) => css`
+        content: '${$headings?.[1]}';
         font-weight: bold;
         display: block;
       `}
