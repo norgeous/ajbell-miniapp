@@ -32,7 +32,7 @@ npm install
 - [x] a11y (esp. of graphs)
 - [x] Tests
   - [x] Storybook Interaction tests (play function), example: [code](https://github.com/norgeous/ajbell-miniapp/blob/main/components/StrategySelector/index.stories.ts#L18)
-  - [ ] vitest tests
+  - [x] code coverage via storybook
 - [x] Lint + Format on Save (in VSCode)
 
 ## Considerations
