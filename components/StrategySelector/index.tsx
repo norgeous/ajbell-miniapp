@@ -1,7 +1,6 @@
 'use client';
 
 import MultiButton from '@/components/MultiButton';
-import { MockIdsType } from '@/mocks/getMockById';
 import useLocalStorage from '@/hooks/useLocalStorage';
 import { Wrap } from './styled';
 
@@ -21,7 +20,7 @@ const investmentStrategies = [
 ];
 
 interface IStrategySelector {
-  onSelectFund: (id: MockIdsType) => void;
+  onSelectFund: (id: string) => void;
 }
 
 const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
@@ -56,7 +55,7 @@ const StrategySelector = ({ onSelectFund }: IStrategySelector) => {
                   ?.fundOptions.find(({ fundName }) => fundName === label)
                   ?.id || '';
 
-              onSelectFund(id as MockIdsType);
+              onSelectFund(id);
             }}
           />
         </>
