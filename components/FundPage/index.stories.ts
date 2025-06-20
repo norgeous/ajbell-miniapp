@@ -29,3 +29,13 @@ export const Primary: Story = {
     await userEvent.click(canvas.getByText('Cautious'));
   },
 };
+
+export const NoData: Story = {
+  args: {
+    allData: {},
+  },
+  play: async ({ canvas, userEvent }) => {
+    await userEvent.click(canvas.getByText('Growth Funds Variations'));
+    await userEvent.click(canvas.getByText('Cautious'));
+  },
+};
