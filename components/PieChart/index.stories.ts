@@ -132,6 +132,22 @@ export const Eighths: Story = {
   },
 };
 
+export const TooManySlices: Story = {
+  args: {
+    values: [
+      { label: 'A', value: 100 / 9 },
+      { label: 'B', value: 100 / 9 },
+      { label: 'C', value: 100 / 9 },
+      { label: 'D', value: 100 / 9 },
+      { label: 'E', value: 100 / 9 },
+      { label: 'F', value: 100 / 9 },
+      { label: 'G', value: 100 / 9 },
+      { label: 'H', value: 100 / 9 },
+      { label: 'I', value: 100 / 9 },
+    ],
+  },
+};
+
 export const NormalisationOf3Halfs: Story = {
   args: {
     values: [
