@@ -1,4 +1,5 @@
 import ExternalLink from '@/components/ExternalLink';
+import { Wrap } from './styled';
 
 interface IDocuments {
   documents: {
@@ -10,14 +11,14 @@ interface IDocuments {
 
 const Documents = ({ documents }: IDocuments) => {
   return (
-    <div>
+    <Wrap>
       <h3>Documents</h3>
       {documents.map(({ id, type, url }) => (
         <ExternalLink key={id} href={url}>
           {type}
         </ExternalLink>
       ))}
-    </div>
+    </Wrap>
   );
 };
 
