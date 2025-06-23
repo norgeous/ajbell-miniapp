@@ -30,14 +30,14 @@ export const Svg = styled.svg`
 const circumference = Math.PI * 2 * 25;
 
 export interface ISlice {
-  index: number;
+  $index: number;
   value: number; // size in percent of slice
   offset: number; // degrees of rotation of this slice
 }
 
 export const Slice = styled.circle<ISlice>`
   fill: transparent;
-  stroke: ${({ index }) => sliceColors[index] || 'red'};
+  stroke: ${({ $index }) => sliceColors[$index] || 'red'};
   stroke-width: 50px;
   transform: ${({ offset }) => `rotate(${-90 + offset}deg)`};
   transform-origin: 50% 50%;
@@ -49,7 +49,7 @@ export const Slice = styled.circle<ISlice>`
 `;
 
 interface ILegendColor {
-  index: number;
+  $index: number;
 }
 
 export const Legend = styled.div`
@@ -62,5 +62,5 @@ export const LegendColor = styled.div<ILegendColor>`
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: ${({ index }) => sliceColors[index] || 'red'};
+  background: ${({ $index }) => sliceColors[$index] || 'red'};
 `;

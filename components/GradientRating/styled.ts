@@ -9,7 +9,7 @@ export const Wrap = styled.div`
 `;
 
 interface IPiece {
-  index: number;
+  $index: number;
   max: number;
   selected: boolean;
 }
@@ -19,7 +19,7 @@ export const Piece = styled.span<IPiece>`
   height: 20px;
   background-image: linear-gradient(to right, green, orange, red);
   background-size: ${({ max }) => max * 100}%;
-  background-position: ${({ index, max }) => (100 / max) * index}%;
+  background-position: ${({ $index, max }) => (100 / max) * $index}%;
   ${({ selected }) =>
     selected &&
     css`

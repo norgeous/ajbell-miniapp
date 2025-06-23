@@ -6,10 +6,10 @@ import GradientRating from '@/components/GradientRating';
 import PieChart from '@/components/PieChart';
 import StarRating from '@/components/StarRating';
 import DataTable from '@/components/Table';
-import ExternalLink from '@/components/ExternalLink';
 import GlassCard from '@/components/GlassCard';
 import ResponsiveColumn from '@/components/ResponsiveColumn';
 import Button from '@/components/Button';
+import Documents from '../Documents';
 
 interface IFund {
   data: AJBellResponseType;
@@ -36,14 +36,7 @@ const Fund = ({ data }: IFund) => {
 
             <StarRating value={data.data.ratings.analystRating} />
 
-            <div>
-              <h3>Documents</h3>
-              {data.data.documents.map(({ id, type, url }) => (
-                <ExternalLink key={id} href={url}>
-                  {type}
-                </ExternalLink>
-              ))}
-            </div>
+            <Documents documents={data.data.documents} />
           </div>
         </ResponsiveColumn>
 

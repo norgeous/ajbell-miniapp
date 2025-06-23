@@ -18,7 +18,7 @@ const DataTable = ({ headings, data }: IDataTable) => (
         </Tr>
       )}
       {adapt(data).map((row, indexRow) => (
-        <Tr key={indexRow} headings={headings}>
+        <Tr key={indexRow} $headings={headings}>
           {row.map((cell, indexCell) => (
             <Td key={indexCell}>{cell}</Td>
           ))}

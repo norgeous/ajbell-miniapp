@@ -21,7 +21,7 @@ const PieChart = ({ values }: IPieChart) => {
         {adpatedValues.map(({ label, normalisedValue, offset }, index) => (
           <PieSlice
             key={label}
-            index={index}
+            $index={index}
             value={normalisedValue}
             offset={offset}
           />
@@ -31,7 +31,7 @@ const PieChart = ({ values }: IPieChart) => {
         data={values.map(({ label, value }, index) => ({
           label: (
             <Legend>
-              <LegendColor index={index} />
+              <LegendColor $index={index} />
               {label}
             </Legend>
           ),
