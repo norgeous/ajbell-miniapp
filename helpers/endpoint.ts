@@ -36,6 +36,13 @@ export type AJBellResponseType = {
   };
 };
 
+const ids = [
+  'BYW8RV9', // Cautious
+  'BYW8RX1', // Balanced
+  'BYW8VG2', // Adventurous
+  'BN0S2V9', // Responsible
+];
+
 // https://nextjs.org/docs/app/api-reference/functions/fetch#fetchurl-options
 const fetcher = (url: string) =>
   fetch(url, { cache: 'force-cache' })
@@ -46,13 +53,6 @@ const fetcher = (url: string) =>
     .catch(err => {
       console.warn('caught the error', err);
     });
-
-const ids = [
-  'BYW8RV9', // Cautious
-  'BYW8RX1', // Balanced
-  'BYW8VG2', // Adventurous
-  'BN0S2V9', // Responsible
-];
 
 export const fetchAll = Promise.allSettled(
   ids.map(id =>
