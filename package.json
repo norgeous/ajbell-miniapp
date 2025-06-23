@@ -11,7 +11,9 @@
     "postlint": "tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "storycap": "storycap http://localhost:6006"
+    "storycap": "storycap http://localhost:6006",
+    "test-storybook": "vitest --project=storybook",
+    "test": "vitest --coverage"
   },
   "dependencies": {
     "next": "15.3.4",
