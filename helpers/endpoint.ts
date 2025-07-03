@@ -63,8 +63,7 @@ export const fetchAll = () =>
     responses.reduce(
       (acc, response, index) => ({
         ...acc,
-        [ids[index]]:
-          response.status === 'fulfilled' ? response.value : undefined,
+        [ids[index]]: response.status === 'fulfilled' && response.value,
       }),
       {},
     ),
