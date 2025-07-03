@@ -12,7 +12,7 @@
     "sb": "storybook dev -p 6006",
     "build-sb": "storybook build",
     "storycap": "storycap http://localhost:6006",
-    "test": "vitest --coverage"
+    "test": "vitest run --coverage"
   },
   "dependencies": {
     "next": "15.3.4",

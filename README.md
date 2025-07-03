@@ -16,7 +16,7 @@ npm install
 | `npm run sb`                 | Runs Storybook in development mode                                                    |
 | `npm run storycap`           | Runs Storycap and captures images of Storybook stories to `__screenshots__` directory |
 | `npm run lint`               | Runs Prettier, ESLint in fix mode, then typescript compiler                           |
-| `npm run test`               | Runs Vitest                                                                           |
+| `npm run test`               | Runs Unit and Storybook's interaction tests with Vitest                               |
 | `npx http-server ./coverage` | View the html `./coverage` report                                                     |
 
 ## Features
