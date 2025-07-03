@@ -10,12 +10,15 @@ npm install
 
 ## How to use
 
-| Command             | What it does                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| `npm run dev`       | Runs Nextjs in development mode                                                       |
-| `npm run storybook` | Runs Storybook in development mode                                                    |
-| `npm run storycap`  | Runs Storycap and captures images of Storybook stories to `__screenshots__` directory |
-| `npm run lint`      | Runs Prettier, ESLint in fix mode, then typescript compiler                           |
+| Command                                | What it does                                                                          |
+| -------------------------------------- | ------------------------------------------------------------------------------------- |
+| `npm run dev`                          | Runs Nextjs in development mode                                                       |
+| `npm run sb`                           | Runs Storybook in development mode                                                    |
+| `npm run storycap`                     | Runs Storycap and captures images of Storybook stories to `__screenshots__` directory |
+| `npm run lint`                         | Runs Prettier, ESLint in fix mode, then typescript compiler                           |
+| `npm run test`                         | Runs all tests with Vitest, including Unit and Storybook's interaction tests          |
+| `npx vitest --project=unit --coverage` | Runs Unit tests in watch mode, with coverage report                                   |
+| `npx http-server ./coverage`           | View the html `./coverage` report                                                     |
 
 ## Features
 

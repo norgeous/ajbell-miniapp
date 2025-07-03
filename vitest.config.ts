@@ -2,6 +2,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+
 const dirname =
   typeof __dirname !== 'undefined'
     ? __dirname
@@ -10,7 +11,7 @@ const dirname =
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   test: {
-    workspace: [
+    projects: [
       {
         extends: true,
         plugins: [
@@ -33,6 +34,14 @@ export default defineConfig({
             ],
           },
           setupFiles: ['.storybook/vitest.setup.ts'],
+          exclude: ['**/node_modules/**'],
+        },
+      },
+      {
+        test: {
+          name: 'unit',
+          environment: 'node',
+          setupFiles: ['vitest.setup.ts'],
         },
       },
     ],

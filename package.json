@@ -9,9 +9,10 @@
     "prelint": "prettier --log-level silent --write \"**/*.{ts,tsx,mdx,md,json}\"",
     "lint": "next lint --fix",
     "postlint": "tsc",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "storycap": "storycap http://localhost:6006"
+    "sb": "storybook dev -p 6006",
+    "build-sb": "storybook build",
+    "storycap": "storycap http://localhost:6006",
+    "test": "vitest run --coverage"
   },
   "dependencies": {
     "next": "15.3.4",
@@ -26,6 +27,7 @@
     "@storybook/addon-docs": "^9.0.15",
     "@storybook/addon-vitest": "^9.0.15",
     "@storybook/nextjs-vite": "^9.0.15",
+    "@storybook/test": "^9.0.0-alpha.2",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -35,7 +37,6 @@
     "eslint-config-next": "15.3.4",
     "eslint-plugin-storybook": "^9.0.15",
     "msw": "^2.10.2",
-    "msw-storybook-addon": "^2.0.5",
     "playwright": "^1.53.2",
     "prettier": "^3.6.2",
     "puppeteer": "^24.11.2",

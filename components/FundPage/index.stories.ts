@@ -5,6 +5,7 @@ import cautiousMockData from '@/mocks/Cautious.json';
 import balancedMockData from '@/mocks/Balanced.json';
 import adventurousMockData from '@/mocks/Adventurous.json';
 import responsibleMockData from '@/mocks/Responsible.json';
+import { expect } from '@storybook/test';
 
 const meta = {
   title: 'Components/FundPage',
@@ -27,6 +28,7 @@ export const Primary: Story = {
   play: async ({ canvas, userEvent }) => {
     await userEvent.click(canvas.getByText('Growth Funds Variations'));
     await userEvent.click(canvas.getByText('Cautious'));
+    await expect(canvas.getByText('VT AJ Bell Cautious I Acc')).toBeVisible();
   },
 };
 
@@ -37,5 +39,6 @@ export const NoData: Story = {
   play: async ({ canvas, userEvent }) => {
     await userEvent.click(canvas.getByText('Growth Funds Variations'));
     await userEvent.click(canvas.getByText('Cautious'));
+    await expect(canvas.getByText('No Data =[')).toBeVisible();
   },
 };
