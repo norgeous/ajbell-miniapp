@@ -41,6 +41,7 @@ export default defineConfig({
         test: {
           name: 'unit',
           environment: 'node',
+          setupFiles: ['vitest.setup.ts'],
         },
       },
     ],
