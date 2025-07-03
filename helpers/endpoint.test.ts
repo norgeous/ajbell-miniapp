@@ -1,24 +1,18 @@
 import { expect, test } from 'vitest';
 import { fetchAll } from './endpoint';
 
-test('mock attempt 1', async () => {
-  const data = await fetchAll;
+import adventurous from '../mocks/Adventurous.json';
+import balanced from '../mocks/Balanced.json';
+import cautious from '../mocks/Cautious.json';
+import responsible from '../mocks/Responsible.json';
 
-  await expect(data.BYW8RV9).toEqual({
-    id: 'abc-123x',
-    firstName: 'John',
-    lastName: 'Maverick',
-  });
-});
+test('Contact 4 endpoints', async () => {
+  const data = await fetchAll();
 
-test('mock from docs', async () => {
-  const response = await fetch(
-    'https://cdn.core3-dev.ajbbuild.uk/interview/BYW8RV9.json',
-  );
-
-  await expect(response.json()).resolves.toEqual({
-    id: 'abc-123',
-    firstName: 'John',
-    lastName: 'Maverick',
+  await expect(data).toEqual({
+    BYW8RV9: cautious,
+    BYW8RX1: balanced,
+    BYW8VG2: adventurous,
+    BN0S2V9: responsible,
   });
 });
