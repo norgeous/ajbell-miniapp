@@ -54,17 +54,18 @@ const fetcher = (url: string) =>
       console.warn('caught the error', err);
     });
 
-export const fetchAll = Promise.allSettled(
-  ids.map(id =>
-    fetcher(`https://cdn.core3-dev.ajbbuild.uk/interview/${id}.json`),
-  ),
-).then(responses =>
-  responses.reduce(
-    (acc, response, index) => ({
-      ...acc,
-      [ids[index]]:
-        response.status === 'fulfilled' ? response.value : undefined,
-    }),
-    {},
-  ),
-);
+export const fetchAll = () =>
+  Promise.allSettled(
+    ids.map(id =>
+      fetcher(`https://cdn.core3-dev.ajbbuild.uk/interview/${id}.json`),
+    ),
+  ).then(responses =>
+    responses.reduce(
+      (acc, response, index) => ({
+        ...acc,
+        [ids[index]]:
+          response.status === 'fulfilled' ? response.value : undefined,
+      }),
+      {},
+    ),
+  );
