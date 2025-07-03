@@ -40,9 +40,7 @@ export default defineConfig({
       {
         test: {
           name: 'unit',
-          // root: './shared_tests',
           environment: 'node',
-          // setupFiles: ['./setup.node.ts'],
         },
       },
     ],
