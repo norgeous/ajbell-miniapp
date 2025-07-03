@@ -12,8 +12,6 @@
     "sb": "storybook dev -p 6006",
     "build-sb": "storybook build",
     "storycap": "storycap http://localhost:6006",
-    "test-sb": "vitest --project=storybook",
-    "test-unit": "vitest --project=unit",
     "test": "vitest --coverage"
   },
   "dependencies": {
